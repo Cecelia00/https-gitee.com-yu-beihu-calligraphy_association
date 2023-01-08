@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
-
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <style>
         body {
@@ -50,9 +51,8 @@
         }
 
         li a {
-            font-size: 20px;
-            font-family: 'YourWebFontName';
-            color: rgb(255, 255, 255);
+            font-size: 17px;
+            color: #ffffff;
         }
 
         .button-header {
@@ -71,7 +71,7 @@
         }
 
         .my-navbar {
-            padding: 10px;
+            padding: 7px;
             transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
             background-color: #0e0c0c;
             opacity: 0.50;
@@ -95,7 +95,7 @@
         /*-webkit-transition ;-moz-transition*/
 
         .top-nav {
-            padding: 10px 5px;
+            padding: 7px 5px;
             background: #09090a;
             opacity: 1;
         }
@@ -121,7 +121,6 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#"><img class="logoimg" src="img\Health.png"></a>
-                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
@@ -130,7 +129,7 @@
                 <!-- mene -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <!-- navbar-collapse 缩减之后的样式 -->
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav nav-top-right">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">首页</a>
                         </li>
@@ -161,7 +160,7 @@
         </nav>
     </div>
 
-    <div style="background-color: #45bcf9; height: 900px;">
+    <div style="background-color: #ffffff; height: 900px;">
 
     </div>
     <!-- 导航栏 -->
