@@ -38,7 +38,7 @@
         }
 
         .logoimg {
-            position: absolute;
+            position: fixed;
             left: 20px;
             top: -77px;
             width: 210px;
@@ -56,7 +56,7 @@
         }
 
         .button-header {
-            padding-top: 10px;
+            padding-top: 7px;
         }
 
         .navbar-toggler {
@@ -71,7 +71,7 @@
         }
 
         .my-navbar {
-            padding: 7px;
+            padding: 6px;
             transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
             background-color: #0e0c0c;
             opacity: 0.50;
@@ -95,7 +95,7 @@
         /*-webkit-transition ;-moz-transition*/
 
         .top-nav {
-            padding: 7px 5px;
+            padding: 6px 5px;
             background: #09090a;
             opacity: 1;
         }
@@ -115,54 +115,48 @@
 
 <body>
     <!-- 导航栏 -->
-    <div class="first">
-        <nav class="navbar navbar-expand-md fixed-top my-navbar navbar-dark" role="navigation">
-            <!-- logo -->
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><img class="logoimg" src="img\Health.png"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#collapsibleNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <!-- mene -->
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <!-- navbar-collapse 缩减之后的样式 -->
-                    <ul class="navbar-nav nav-top-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">首页</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">活动</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">云集</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">活动</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">关于我们</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="" href="">历史</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="" href="">登录</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="" href="">注册</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-md fixed-top my-navbar navbar-dark first" role="navigation">
+        <!-- logo -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img class="logoimg" src="img\Health.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                style="float: right;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <!-- mene -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <!-- navbar-collapse 缩减之后的样式 -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">活动</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">云集</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">活动</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="" href="">历史</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="" href="">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="" href="">注册</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <div style="background-color: #ffffff; height: 900px;">
-
-    </div>
+    <div style="height: 900px;"></div>
     <!-- 导航栏 -->
 
 
