@@ -96,6 +96,90 @@
         button.navbar-toggle>span.icon-bar {
             background-color: #dedede
         }
+
+        /* 
+        导航栏登录注册css
+         */
+        .login {
+            /* padding: 15px 25px; */
+            border: unset;
+            border-radius: 5px;
+            color: #212121;
+            z-index: 1;
+            background: #e8e8e8;
+            position: relative;
+            font-weight: 1000;
+            font-size: 10px;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            transition: all 250ms;
+            overflow: hidden;
+        }
+
+        .login::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            /* border-radius: 3px; */
+            background-color: #212121;
+            z-index: -1;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            transition: all 250ms
+        }
+
+        .login:hover {
+            color: #e8e8e8;
+        }
+
+        .login:hover::before {
+            width: 100%;
+        }
+
+        .resd {
+            /* padding: 15px 25px; */
+            border: unset;
+            border-radius: 7px;
+            color: #212121;
+            z-index: 1;
+            background: #e8e8e8;
+            position: relative;
+            font-weight: 1000;
+            font-size: 10px;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            transition: all 250ms;
+            overflow: hidden;
+        }
+
+        .resd::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            border-radius: 3px;
+            background-color: #212121;
+            z-index: -1;
+            transition: all 250ms
+        }
+
+        .resd:hover {
+            color: #e8e8e8;
+        }
+
+        .resd:hover::before {
+            width: 100%;
+        }
+
+
+        /* 
+        导航栏登录注册css
+         */
     </style>
 
 </head>
@@ -105,7 +189,7 @@
     <nav class="navbar navbar-expand-md fixed-top my-navbar navbar-dark first" role="navigation">
         <!-- logo -->
 
-        <a class="navbar-brand" href="#" style="margin-left: 250px;">
+        <a class="navbar-brand" href="#" style="margin-left: 230px;">
             <img class="logoimg" src="img/Health.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -130,10 +214,10 @@
                     <a class="nav-link" href="">活动</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">关于我们</a>
+                    <a class="nav-link" href="">关于</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="" href="">历史</a>
+                    <a class="nav-link" id="" href="">关于我们</a>
                 </li>
                 <!-- <li class="nav-item"> -->
                 <!-- <a class="nav-link" id="" href="">登录</a> -->
@@ -147,13 +231,13 @@
             <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
 
             </ul>
-            <a class="nav-link  btn-bd-download d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">登录</a>
-            <a class="nav-link  btn-bd-download d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">注册</a>
+            <button class="nav-link login d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">登录</button>
+            <button class="nav-link resd d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">注册</button>
 
         </div>
     </nav>
 
-    <!-- <div style="height: 900px;"></div> -->
+
     <!-- 导航栏 -->
     <!--轮播图-->
     <div id="carouselExampleIndicators" class="carousel slide" data-interval="2000" data-ride="carousel">
@@ -197,7 +281,7 @@
         </button>
     </div>
     <!-- <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js "></script> -->
-
+    <div style="height: 900px;"></div>
 </body>
 <script>
     $(window).scroll(function () {
