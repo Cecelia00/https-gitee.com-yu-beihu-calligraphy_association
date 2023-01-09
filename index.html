@@ -63,6 +63,10 @@
             transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
             background-color: #ffffff;
             opacity: 0.50;
+            -webkit-box-shadow: 3px 2px 37px -13px rgba(0, 0, 0, .3);
+            box-shadow: 3px 2px 37px -13px rgba(0, 0, 0, .3);
+
+
         }
 
         .my-navbar a {
@@ -71,7 +75,7 @@
         }
 
         .my-navbar a:hover {
-            color: #45bcf9 !important;
+            color: #000000 !important;
             background: transparent;
             outline: 0
         }
@@ -105,14 +109,14 @@
             /* padding: 15px 25px; */
             border: unset;
             border-radius: 5px;
-            color: #e4e4e4;
+            color: #000000;
             z-index: 1;
-            background: #1e1d1d;
+            background: #e4e3e3;
             position: relative;
             font-weight: 1000;
             font-size: 10px;
-            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            -webkit-box-shadow: 0px 0px 11px -6px rgba(0, 0, 0, .3);
+            box-shadow: 0px 0px 11px -6px rgba(0, 0, 0, .3);
             transition: all 250ms;
             overflow: hidden;
         }
@@ -144,14 +148,14 @@
             /* padding: 15px 25px; */
             border: unset;
             border-radius: 5px;
-            color: #e4e4e4;
+            color: #000000;
             z-index: 1;
-            background: #1e1d1d;
+            background: #e4e3e3;
             position: relative;
             font-weight: 1000;
             font-size: 10px;
-            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            -webkit-box-shadow: 0px 0px 11px -6px rgba(0, 0, 0, .3);
+            box-shadow: 0px 0px 11px -6px rgba(0, 0, 0, .3);
             transition: all 250ms;
             overflow: hidden;
         }
@@ -187,10 +191,10 @@
 
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-md fixed-top my-navbar navbar-dark first" role="navigation">
+    <nav class="navbar navbar-expand-md fixed-top my-navbar navbar-light first" role="navigation">
         <!-- logo -->
 
-        <a class="navbar-brand" href="#" style="margin-left: 230px;">
+        <a class="navbar-brand" href="#" style="margin-left: 150px;">
             <img class="logoimg" src="img/logo3.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -199,7 +203,7 @@
 
         <!-- mene -->
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" style="">
             <!-- navbar-collapse 缩减之后的样式 -->
             <ul class="nav navbar-nav">
                 <li class="nav-item">
@@ -209,17 +213,19 @@
                     <a class="nav-link" href="">活动</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="">新闻中心</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="">作品展示</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">教学</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">关于</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" id="" href="">关于我们</a>
                 </li>
+
                 <!-- <li class="nav-item"> -->
                 <!-- <a class="nav-link" id="" href="">登录</a> -->
                 <!-- <a class="nav-link btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">登录</a>
