@@ -301,6 +301,50 @@
             top: 21px;
             left: 5px;
         }
+
+        /* 
+          导航栏收缩时展示按钮结束
+         */
+
+        /* 更多活动按钮 */
+        .moreActivity {
+            width: 7.5em;
+            height: 2.3em;
+            /* margin: 0.5em; */
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 0.625em;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .moreActivity:hover {
+            color: black;
+        }
+
+        .moreActivity:after {
+            content: "";
+            background: white;
+            position: absolute;
+            z-index: -1;
+            left: -20%;
+            right: -20%;
+            top: 0;
+            bottom: 0;
+            transform: skewX(-45deg) scale(0, 1);
+            transition: all 0.5s;
+        }
+
+        .moreActivity:hover:after {
+            transform: skewX(-45deg) scale(1, 1);
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
     </style>
 
 </head>
@@ -444,6 +488,10 @@
 
             </div>
             <div class="col">
+                <div class="float-right mr-3">
+                    <button class="moreActivity "> 进入活动中心
+                    </button>
+                </div>
 
             </div>
         </div>
