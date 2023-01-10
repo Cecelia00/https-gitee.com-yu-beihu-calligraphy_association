@@ -186,7 +186,43 @@
         .resd:hover::before {
             width: 100%;
         }
-
+        
+        /*轮播图左右按钮*/
+        .prev {
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            margin-top: 15px;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 45px;
+            border-radius: 45px;
+            display: none;
+            z-index: 2;
+        }
+ 
+        .next {
+            position: absolute;
+            right: 2%;
+            top: 50%;
+            margin-top: 15px;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 45px;
+            border-radius: 45px;
+            display: none;
+            z-index: 2;
+        }
 
         /* 
         导航栏登录注册css
@@ -284,11 +320,11 @@
             </div>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+        <button class="carousel-control-prev prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+        <button class="carousel-control-next next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </button>
@@ -323,14 +359,25 @@
     })
 </script> -->
 <script>
-    /*轮播图实现自动播放*/
+   
+window.addEventListener('load', function() {
+    //1.获取元素
+    var prev = document.querySelector('.prev');
+    var next = document.querySelector('.next');
+    var ju = document.querySelector('.carouselExampleIndicators');
 
-    $(function () {
-        $('#carouselExampleIndicators').carousel({
-            interval: 2000
-        });
-    });
-
+  //轮播图：鼠标移上图片显示左右按钮
+  carouselExampleIndicators.addEventListener('mouseenter', function() {
+        prev.style.display = 'block';
+        next.style.display = 'block';
+        
+  })
+  //鼠标移走时会隐藏左右按钮
+  carouselExampleIndicators.addEventListener('mouseleave', function() {
+        prev.style.display = 'none';
+        next.style.display = 'none';
+    })
+})
 </script>
 
 </html>
