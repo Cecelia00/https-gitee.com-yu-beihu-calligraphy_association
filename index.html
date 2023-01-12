@@ -461,13 +461,11 @@
 
             </div>
         </nav>
-        <div class="searchForm" style="display: none;">
+        <div class="search" style="display: none;">
             <form action="">
-                <div class="search">
-                    <div class="input-group d-flex justify-content-center">
-                        <input type="text" class="input " placeholder="请输入您想要输入的内容" autocomplete="off">
-                        <input class="button--submit" value="搜索内容" type="submit">
-                    </div>
+                <div class="input-group d-flex justify-content-center">
+                    <input type="text" class="input " placeholder="请输入您想要输入的内容" autocomplete="off">
+                    <input class="button--submit" value="搜索内容" type="submit">
                 </div>
                 <!-- col-lg-11 col-md-11 col-sm-10 -->
             </form>
@@ -667,7 +665,8 @@
     // 点击搜索栏展现消失
     $(function () {
         $(".btnli").click(function () {
-            $(".searchForm").fadeToggle(1000);
+            $(".search").fadeToggle("slow");
+            // $(".search").slideToggle("slow");
         });
     })
 </script>
