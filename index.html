@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zn-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +12,13 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script  type="text/javascript" src="js/template-web.js"></script>
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  
     <style>
         body {
             font-family: SF Pro SC, SF Pro Display, SF Pro Icons, AOS Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -392,6 +396,105 @@
             -webkit-transition: all 0.5s;
             transition: all 0.5s;
         }
+          /*作品展示滑动页*/
+         
+        /* #key-links-words2>div{
+            block-size: 320px;
+            background-color: #fff;
+            /* 设置宽高比 */
+            /* aspect-ratio: 1;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px rgba(173, 173, 173, 0.3);
+        } */ 
+        
+img {
+    border: 0
+}
+
+.lb1 {
+    width: 1200px;
+   margin: 50px auto;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   height: 200px;
+   position: relative;
+}
+
+
+.lb1 .swiper-slide a {
+    width: auto;
+    height: 200px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.lb1 .swiper-slide a img {
+    width: auto;
+    height: 100%;
+    display: block;
+}
+
+.lb1 .swiper-slide {
+    width: auto;
+
+}
+
+.lb1 .swiper-button-prev {
+    left: -39px;
+    width: 34px;
+    height: 34px;
+    background: url(img/biaoqian-arrowL.png) center no-repeat;
+    border-radius: 2px;
+    top: calc(50% - 17px);
+}
+.lb1 .swiper-button-prev:hover {
+    background: url(img/biaoqian-arrowL-sel.png) center no-repeat;
+}
+.lb1 .swiper-button-next {
+    right: -39px;
+    width: 34px;
+    height: 34px;
+    background: url(img/biaoqian-arrowR.png) center no-repeat;
+    border-radius: 2px;
+    top: calc(50% - 17px);
+}
+.lb1 .swiper-button-next:hover {
+    background: url(img/biaoqian-arrowR-sel.png) center no-repeat;
+}
+/* 响应式 */
+/* @media (max-width:991px) {
+    
+    .lb1 {
+               width: 100%;
+               text-align: center;
+    }
+    .lb1 .swiper-slide {
+        max-width: 80%;
+        margin-left: 0;
+    }
+} */
+/*屏幕宽度小于600px,改变布局和样式*/
+/* @media screen and (max-width:600px) {
+           .swiper-wrapper>div {
+               float: none;
+               width: 100%;
+               text-align: center;
+           }
+       } */
+        /*作品展示页结束*/
+
     </style>
 
 </head>
@@ -543,7 +646,83 @@
         </div>
     </div>
     <!-- 活动要闻结束 -->
+  <!--作品展示开始-->
+  
+  
+     <div class="container-fluid">
+        <div class="row ">
+            <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+                    <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+                  </svg>
+            <span class="align-middle"
+                style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示</span>
+            </div>
+            
 
+        </div>
+        <div class="lb1 row" style="width: 1200px; margin: 0 auto;">
+            <div class="swiper-container swiper-container1">
+                <div class="swiper-wrapper" id="key-links-words2" >
+                    <div class="swiper-slide" >
+                        <a href="javascript:" class="ellipsis" >
+                            <img src="" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide" >
+                         <a href="javascript:" class="ellipsis"  >
+                            <img src="img/1.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide" >
+                        <a href="javascript:" class="ellipsis"  >
+                            <img src="img/2.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide" >
+                        <a href="javascript:" class="ellipsis"  >
+                            <img src="img/3.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide" >
+                        <a href="javascript:" class="ellipsis"  >
+                            <img src="img/4.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide" >
+                        <a href="javascript:" class="ellipsis"  >
+                            <img src="img/1.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide" >
+                        <a href="javascript:" class="ellipsis"  >
+                            <img src="img/2.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <a href="javascript:" class="ellipsis"  >
+                            <img src="img/3.png" alt="">
+                        </a>
+                    </div>
+                    
+                    
+                    
+               </div>
+            </div>
+            <div class="swiper-button-next swiper-button-next1"></div>
+            <div class="swiper-button-prev swiper-button-prev1"></div>
+        </div>
+    </div>
+   
+<!--作品展示结束-->
     <div style="height: 900px;"></div>
 </body>
 <script>
@@ -593,5 +772,20 @@
         })
     })
 </script>
+<!--作品展示-->
+<script>
+	var swiper = new Swiper('.swiper-container1', {
+    slidesPerView:'auto',/*根据slide的宽度自动调整展示数量*/
+    spaceBetween: 20,/*左右的间距20px*/
+    centeredSlides: false,/*是否居中显示*/
+    slidesPerGroup:5,/*定义slides的5个为一组*/
+    navigation: {
+        nextEl: ".swiper-button-next1",
+        prevEl: ".swiper-button-prev1",
+      },
+    });
+</script>
+
+
 
 </html>
