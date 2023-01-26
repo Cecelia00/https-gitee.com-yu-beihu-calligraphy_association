@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <!--Swiper CSS-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/popper.min.js"></script>
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/template-web.js"></script>
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
@@ -419,13 +420,120 @@
 
         /* 新闻结束 */
         /*作品展示开始*/
-        .calligraphy_icon{
-            margin:0 auto;
+        /*图标*/
+        .calligraphy_icon {
+            margin: 0 auto;
             width: 180px;
         }
-        .calligraphy_icon>div{
+
+        .calligraphy_icon>div {
             margin-top: 15px;
         }
+        /*滑动*/
+        .slide-container {
+            margin-top: 10px;
+            max-width: 1200px;
+            width: 100%;
+            background-color: grey;
+            padding: 40px 20px;
+        }
+        .slide-content{
+            margin: 0 40px;
+        }
+       
+        .card{
+            
+            border-radius: 15px;
+            background-color: hsl(0, 0%, 94%);
+            position: relative;
+            box-shadow: 0 12px 16px 0 rgba(39, 36, 36, 0.24), 0 17px 50px 0 rgba(59, 55, 55, 0.19);
+
+           
+        }
+       .card:hover{
+            box-shadow: 0 13px 17px 0 rgba(0, 0, 0, 0.24), 0 18px 51px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 250px;
+       }
+        .image-content,
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            /* padding: -10px -14px; */
+            
+        }
+        .image-content{
+            position: relative;
+            row-gap:5px ;
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            
+        }
+       
+        .card-image { 
+            position: relative;
+            height: 150px;
+            width: 150px;    
+           
+        }
+
+        
+         .card-image,.card-img {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px ;
+            object-fit: cover;
+        }
+        .name{
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            text-align: center;
+        }
+        .description{
+            font-size: 14px;
+            color: #707070;
+            text-align: center;
+            padding: 2px ;
+        }
+        .button{
+            border: none;
+            font-size: 16px;
+            color: #FFF;
+            padding: 8px 16px;
+            background-color: rgb(225, 65, 65);
+            border-radius: 12px;
+            margin: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 4.5em;
+            height: 2.3em;
+    
+            margin: 2px -50px; 
+            position:relative;
+            left:55%;
+            
+        
+            
+        }
+        .button:hover{
+            background-color:rgb(207, 46, 46); 
+            box-shadow: 0 1px 11px 0 rgba(0,0,0,0.24), 0 11px 20px 0 rgba(0,0,0,0.19);
+            
+        }
+        /*左右按钮*/
+        .swiper-button-next ,.swiper-button-prev{
+            font-size: 50px !important;
+            color: #e8e8e8 !important;
+            outline: none;
+            border: none;
+        }
+
 
         /*作品展示结束*/
     </style>
@@ -574,7 +682,6 @@
                     <button class="moreActivity "> 进入活动中心
                     </button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -596,13 +703,119 @@
         <div class="row mt-4 calligraphy_icon">
             <div class="col ">
                 <svg class="bi bi-file-richtext" width="40" height="40" viewBox="0 0 16 16" fill="currentColor">
-                    <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
-                    <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"/>
-                  </svg>
-                <span class="align-middle"
-                    style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示
+                    <path fill-rule="evenodd"
+                        d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z" />
+                    <path fill-rule="evenodd"
+                        d="M4.5 11.5A.5.5 0 0 1 5 11h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z" />
+                </svg>
+                <span class="align-middle" style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示
                 </span>
             </div>
+        </div>
+
+        <div class="row slide-container swiper">
+            
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+
+                            <div class="card-image">
+                                <img src="img/1.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-text">
+                                <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+
+                            <div class="card-image">
+                                <img src="img/1.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-text">
+                                <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+
+                            <div class="card-image">
+                                <img src="img/1.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-text">
+                                <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+
+                            <div class="card-image">
+                                <img src="img/1.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-text">
+                                <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+
+                            <div class="card-image">
+                                <img src="img/1.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-text">
+                                <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+
+                            <div class="card-image">
+                                <img src="img/1.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-text">
+                                <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
     <!--作品展示结束-->
@@ -611,6 +824,9 @@
 
 
 </body>
+        <!--Swiper JS-->
+        <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+        
 <script>
     $(window).scroll(function () {
         if ($(".navbar ").offset().top > 50) {
@@ -658,18 +874,21 @@
 </script>
 <!--作品展示-->
 <script>
-    var swiper = new Swiper('.swiper-container1', {
-        slidesPerView: 'auto',/*根据slide的宽度自动调整展示数量*/
-        spaceBetween: 20,/*左右的间距20px*/
-        centeredSlides: false,/*是否居中显示*/
-        slidesPerGroup: 5,/*定义slides的5个为一组*/
-        navigation: {
-            nextEl: ".swiper-button-next1",
-            prevEl: ".swiper-button-prev1",
-        },
+     var swiper = new Swiper(".slide-container", {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween:30,
+      loop: true,
+      loopFillGroupWithBlank: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
 </script>
-
-
 
 </html>
