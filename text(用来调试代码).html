@@ -482,13 +482,43 @@
         }
 
         .swiper {
+            position: relative;
             width: 700px;
             height: 450px;
         }
         .swiper img{
+            position: relative;
             width: 700px;
-            height: 450px;
+            height: 440px;
         }
+        .activity a:hover{
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .my-pagination-clickable{
+            float: left;
+            text-align: right;
+            padding: 5px;
+            background-color:rgba(0,0,0,0.3);
+        }
+
+        .swiper .detail{
+            position:absolute;
+            bottom: 14px;
+            left: 20px; 
+        }
+
+        .swiper .detail a{
+            color: white;
+            text-decoration: none; 
+        }
+
+        .swiper .detail a:hover{
+            color: white;
+            text-decoration: none; 
+        }
+
 
         /* 响应式 */
         /* @media (max-width:991px) {
@@ -667,15 +697,35 @@
             <!-- 轮播图 -->
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/1.png" /></div>
-                    <div class="swiper-slide"><img src="img/2.png" /></div>
-                    <div class="swiper-slide"><img src="img/3.png" /></div>
-                    <div class="swiper-slide"><img src="img/4.png" /></div>
+                    <div class="swiper-slide ">
+                        <img src="img/1.png" />
+                        <div class="detail">
+                            <a href="#">活动1</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/2.png" />
+                        <div class="detail">
+                            <a href="#">活动2</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/3.png" />
+                        <div class="detail">
+                            <a href="#">活动3</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/4.png" />
+                        <div class="detail">
+                            <a href="#">活动4</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 如果需要分页器 -->
                 <div class="swiper-pagination"></div>
-
+                
                 <!-- 如果需要导航按钮 -->
                 <!-- <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div> -->
@@ -684,8 +734,10 @@
                 <!-- <div class="swiper-scrollbar"></div> -->
 
             </div>
+           
         </div>
         <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/swiper.min.js"></script>
         <script>
             var mySwiper = new Swiper('.swiper', {
                 //   direction: 'vertical', // 垂直切换选项
@@ -703,8 +755,9 @@
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
+                    // bulletElement : 'div',
+                    clickableClass : 'my-pagination-clickable',
                 },
-
 
                 // 如果需要前进后退按钮
                 navigation: {
@@ -736,11 +789,11 @@
             }
             mySwiper.el.onmouseout = function () {
                 mySwiper.autoplay.start();
-            }     
+            } 
         </script>
         <!--轮播图结束-->
         <div class="col">
-            <ul class=" ">
+            <ul class="activity" type="none">
                 <li class="">
                     <a class="" href="#">活动1</a>
                     <hr>
