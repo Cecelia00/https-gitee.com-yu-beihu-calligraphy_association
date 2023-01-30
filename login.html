@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>余光登录</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        .fullscreenvideo {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+        
+        .videocontainer {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: -0.4px;
+            top: 0px;
+            overflow: hidden;
+            z-index: -100;
+        }
+        
+        .videocontainer:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        
+        @font-face {
+            font-family: 'youshe';
+            /* 这个名字可以自己定义 */
+            src: url('fonts/OptimizedTitleBlack.ttf');
+        }
+        
+        .dadanshise {
+            height: 20px;
+            font-size: 105px;
+            font-family: 'youshe';
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: 250px;
+            /* margin-left: 100px; */
+            letter-spacing: 15px;
+            width: 600px;
+            height: 170px;
+        }
+        
+        .thedadanshise {
+            height: 20px;
+            font-size: 50px;
+            font-family: 'youshe';
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: 250px;
+            /* margin-left: 100px; */
+            letter-spacing: 15px;
+            width: 600px;
+            height: 170px;
+        }
+        
+        .thedadanshise1 {
+            font-size: 50px;
+            font-family: 'youshe';
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: 120px;
+            margin-left: 30px;
+            letter-spacing: 10px;
+            width: 600px;
+            height: 170px;
+        }
+        
+        .thesmshow {
+            font-size: 40px;
+            font-family: 'Rockstar';
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: -180px;
+            margin-left: 70px;
+            opacity: 0.7;
+            width: 600px;
+            height: 150px;
+        }
+        
+        .thesmshow1 {
+            font-size: 50px;
+            font-family: 'youshe';
+            color: rgb(255, 255, 255);
+            position: relative;
+            margin-left: 40px;
+            top: -150px;
+            width: 600px;
+            height: 150px;
+        }
+        
+        .dadanshise1 {
+            font-size: 100px;
+            font-family: 'youshe';
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: 180px;
+            margin-left: 50px;
+            letter-spacing: 10px;
+            width: 600px;
+            height: 170px;
+        }
+        
+        @font-face {
+            font-family: 'Rockstar';
+            /* 这个名字可以自己定义 */
+            src: url('fonts/Rockstar-ExtraBold.otf');
+        }
+        
+        .dadanshise2 {
+            font-size: 40px;
+            font-family: 'Rockstar';
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: -180px;
+            margin-left: 70px;
+            opacity: 0.7;
+            width: 600px;
+            height: 150px;
+        }
+        
+        .therow {
+            transform: translateY(50%);
+            position: absolute;
+            right: 10%;
+            top: -220px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .form {
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            margin: 0 auto;
+            /* margin-left: 500PX; */
+        }
+        
+        .form .inputBox {
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .form .inputBox input {
+            width: 100%;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            border: none;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 1px;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form .inputBox input::placeholder {
+            color: #fff;
+        }
+        
+        .form .inputBox input[type="submit"] {
+            background: #fff;
+            color: #666;
+            max-width: 95%;
+            margin-bottom: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+        }
+        
+        body {
+            background-color: #cbd6d8;
+        }
+        
+        div.forget {
+            margin-top: 6px;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        
+        div.forget>label {
+            cursor: pointer;
+        }
+        
+        div.forget>a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .number {
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            height: 40px;
+            outline: none;
+            border: none;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 1px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        li {
+            color: #fff;
+        }
+        
+        li>a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        li>a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .div_phonenumber {
+            margin-top: 10px;
+        }
+        
+        .div_email {
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .foot {
+            margin: 0 20px;
+        }
+        
+        .tang-pass-sms-agreement {
+            display: inline-block;
+            margin-top: 18px;
+            font-size: 14px;
+            line-height: 14px;
+            color: #cccccc;
+        }
+        
+        .logo {
+            border-radius: 50%;
+            margin: 25px;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function onMouseOver() {
+            dianhua.style.cursor = 'pointer';
+            youxiang.style.cursor = 'pointer';
+        }
+
+        function changePage(val) {
+            var phonenumber_div = document.getElementById("phonenumber");
+            var email_div = document.getElementById("email");
+            if (val == 'phonenumber') {
+                phonenumber_div.style.display = 'block';
+                email_div.style.display = 'none';
+            } else if (val == 'email') {
+                phonenumber_div.style.display = 'none';
+                email_div.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="videocontainer">
+        <video class="fullscreenvideo" poster="__ROOT__/Themes/tdt/Asset/images/loginbg.jpg" id="bgvid" playsinline="" autoplay="" muted="ture" loop="">
+            <source src="mixkit-top-aerial-shot-of-seashore-with-rocks-1090.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container-fluid">
+        <div class="row therow">
+            <div class="form " id="phonenumber_div">
+                <h2><b>登录</b></h2>
+                <div class="login_title_div" id="login_title_div">
+                    <ul class="row">
+                        <li class="col-8 d-flex justify-content-between" id="dianhua" onmouseover="onMouseOver()" onclick="changePage('phonenumber')">电话号码</li>
+                        <li class="col-4 d-flex justify-content-between" id="youxiang" onmouseover="onMouseOver()" onclick="changePage('email')">电子邮箱</li>
+                    </ul>
+                </div>
+                <div class="div_phonenumber" id="phonenumber">
+                    <form>
+                        <div class="inputBox form-group">
+                            <label for="account" style="color: black;">手机号</label>
+                            <div class="row">
+                                <div class="col-3">
+                                    <select name="" id="" class="number">
+                                        <option value="+86" style="color: black;">+86</option>
+                                    </select>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" id="account" required style="height: 36px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputBox form-group">
+                            <label for="password" style="color: black;">密码</label>
+                            <input type="password" class="form-control" id="password" required style="height: 36px;">
+                        </div>
+                        <div class="inputBox">
+
+                            <input type="submit" class="btn btn-primary" value="登录">
+                        </div>
+                        <div style="height: 50px;" class="d-flex justify-content-between">
+                            <div class="forget align-items-center">
+                                <label for="rememberPasswordId">新用户注册</label>
+                            </div>
+                            <div class="forget align-items-center">
+                                <a href="">忘记密码?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="div_email" id="email">
+                    <form>
+                        <div class="inputBox">
+                            <label for="account">邮箱</label>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="account" style="height: 36px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <label for="password">密码</label>
+                            <input type="text" class="form-control" id="password" style="height: 36px;">
+                        </div>
+                        <div class="inputBox">
+
+                            <input type="submit" class="btn btn-primary" value="登录" style="height: 36px;">
+                        </div>
+                        <div style="height: 50px;" class="d-flex justify-content-between">
+                            <div class="forget align-items-center">
+                                <label for="rememberPasswordId">新用户注册</label>
+                            </div>
+                            <div class="forget align-items-center">
+                                <a href="">忘记密码?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="foot">
+                    <div style="text-align: center;">
+                        <span class="tang-pass-sms-agreement">———————或者——————— </span>
+
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <input class="logo " type="image" src="https://pic4.zhimg.com/v2-e2a68a80514d63e552e2aed15c563333_r.jpg" width="28" height="28">
+                    <input class="logo" type="image" src="https://p0.ssl.qhimgs1.com/sdr/400__/t01f3761f4e78b8f070.png" width="28" height="28">
+                    <input class="logo" type="image" src="http://pic.ntimg.cn/file/20201203/29443485_102342189000_2.jpg" width="28" height="28">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class=" visible-md-block visible-lg-block">
+            <div class="dadanshise ml-2">
+                大胆试色
+            </div>
+            <div class="dadanshise1">
+                <u> 超越可能</u>
+            </div>
+            <div class="dadanshise2">
+                Bold Color Test <br> Beyond Possibility
+            </div>
+        </div>
+        <div class=" visible-sm-block">
+            <div class="thedadanshise ml-1">
+                大胆试色
+            </div>
+            <div class="thedadanshise1">
+                <u> 超越可能</u>
+            </div>
+        </div>
+        <div class="visible-xs-block">
+            <div class="thesmshow ml-1">
+                大胆试色 超越可能
+            </div>
+        </div>
+        <div class="thesmshow1 visible-xs-block">
+            余光摄影集 因为热爱
+        </div>
+    </div>
+
+
+</body>
+
+</html>
