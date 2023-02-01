@@ -482,12 +482,12 @@
         }
 
         .swiper {
-            position: relative;
+            /* position: relative; */
             width: 700px;
             height: 450px;
         }
         .swiper img{
-            position: relative;
+            /* position: absolute; */
             width: 700px;
             height: 440px;
         }
@@ -497,18 +497,20 @@
         }
         
         .my-pagination-clickable{
+            pointer-events:none;
             text-align: right;
             padding: 5px;
-            background-color:rgba(0,0,0,0.2);
+            background-color:rgba(0,0,0,0.1);
         }
 
         .swiper .detail{
             position:absolute;
-            bottom: 14px;
+            bottom: 16px;
             left: 20px; 
         }
 
         .swiper .detail a{
+            /* pointer-events:fill; */
             color: white;
             text-decoration: none; 
         }
@@ -518,6 +520,10 @@
             text-decoration: none; 
         }
 
+        .row{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
 
         /* 响应式 */
         /* @media (max-width:991px) {
@@ -541,7 +547,6 @@
        } */
         /*作品展示页结束*/
     </style>
-
 </head>
 
 <body>
@@ -697,25 +702,25 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide ">
-                        <img src="img/1.png" />
+                        <a href="#"><img src="img/1.png" /></a>
                         <div class="detail">
                             <a href="#">活动1</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/2.png" />
+                        <a href="#"><img src="img/2.png" /></a>
                         <div class="detail">
                             <a href="#">活动2</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/3.png" />
+                        <a href="#"><img src="img/3.png" /></a>
                         <div class="detail">
                             <a href="#">活动3</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/4.png" />
+                        <a href="#"><img src="img/4.png" /></a>
                         <div class="detail">
                             <a href="#">活动4</a>
                         </div>
@@ -727,7 +732,7 @@
                 
                 <!-- 如果需要导航按钮 -->
                 <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
+                <div class="swiper-button-next"></div> -->
 
                 <!-- 如果需要滚动条 -->
                 <!-- <div class="swiper-scrollbar"></div> -->
@@ -741,6 +746,7 @@
             var mySwiper = new Swiper('.swiper', {
                 //   direction: 'vertical', // 垂直切换选项
                 speed: 2500,
+                preventClicks : false,
                 autoplay: {
                     delay: 2000,
                     disableOnInteraction: false,
@@ -754,7 +760,7 @@
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
-                    // bulletElement : 'div',
+                    bulletElement : 'li',
                     clickableClass : 'my-pagination-clickable',
                 },
 
