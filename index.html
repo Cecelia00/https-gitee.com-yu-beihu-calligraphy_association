@@ -508,17 +508,22 @@
             width: 180px;
         }
 
-        .calligraphy_icon>div {
-            margin-top: 15px;
+        /* .calligraphy_icon>div {
+            margin-top: -1px;
+        } */
+        .calligraphy_introduce{
+            font-size: 14px;
+            text-align: center;
         }
         
         /*滑动*/
         .slide-container {
             margin-top: 1x;
-            max-width: 1300px;
+            max-width: 1200px;
             width: 100%;
+            max-height: 700px;
             /* background-color: rgb(222, 219, 219); */
-            padding: 40px 20px;
+            padding: 0 20px 40px 20px;
             /* --swiper-navigation-size:0; */
             overflow-x: hidden;
         }
@@ -534,12 +539,12 @@
             background-color: rgb(255, 255, 255);
             position: relative;
             box-shadow: 0 4px 6px 0 rgba(39, 36, 36, 0.24);
-
+             background-color:rgba(255,255,255,0.15);
 
         }
 
         .carde:hover {
-            box-shadow: 1px 7px 9px 1px rgba(0, 0, 0, 0.24);
+            box-shadow: 1px 7px 8px 1px rgba(0, 0, 0, 0.24) ;
             cursor: pointer;
             transition: all 0.3s ease;
             
@@ -563,6 +568,7 @@
             border-radius: 15px 15px 0 0;
 
         }
+        
 
         .card-image {
             position: relative;
@@ -999,21 +1005,22 @@
 
     <!--作品展示开始-->
     <div class="container-fluid">
-        <div class="row mt-4 calligraphy_icon">
-            <div class="col ">
-                <svg class="bi bi-file-richtext" width="40" height="40" viewBox="0 0 16 16" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z" />
-                    <path fill-rule="evenodd"
-                        d="M4.5 11.5A.5.5 0 0 1 5 11h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z" />
-                </svg>
-                <span class="align-middle" style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示
-                </span>
-                
+            <div class="row mt-4 calligraphy_icon">
+                <div class="col ">
+                    <svg class="bi bi-file-richtext" width="40" height="40" viewBox="0 0 16 16" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z" />
+                        <path fill-rule="evenodd"
+                            d="M4.5 11.5A.5.5 0 0 1 5 11h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z" />
+                    </svg>
+                    <span class="align-middle" style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示
+                    </span>
+                    
+                </div>
             </div>
-        </div>
-        <!-- <p>北宋大文豪苏轼写过两篇《赤壁赋》，后人称之为《前赤壁赋》和《后赤壁赋》，都是中国古代文学史上的名篇，同时也是著名的书法作品。苏轼被贬为黄州（今湖北黄冈）团练副使的1082年秋、冬，先后两次游览了黄州附近的赤壁，写下这两篇赋。他的前后赤壁赋反映了这时的思想情感。</p>
-            -->
+            <p class="calligraphy_introduce">北宋大文豪苏轼写过两篇《赤壁赋》，后人称之为《前赤壁赋》和《后赤壁赋》，都是中国古代文学史上的名篇。</p>
+           
+       
         <div class="row slide-container swiper ">
             <div class="card-wrapper swiper-wrapper">
                 <div class="carde swiper-slide">

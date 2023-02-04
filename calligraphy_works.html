@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三人行书法协会作品展示</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .calligraphy_video_container{
+            width: 100%;
+            height: 90%;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            z-index: -9999;
+            /* background-color: brown; */
+            
+        }
+        .fullscreenvideo{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: fill;
+            overflow: hidden;
+            z-index: -9999;
+        }
+        
+        .search{
+            width: 400px;
+            height: 50px;
+            border: none;
+            position: absolute;
+            
+            /* /* left: 35%; */
+            bottom: 24%; 
+            text-align: center;
+            
+            
+        }
+        button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            border: none;
+            text-align: center;
+            z-index: 1;
+            background: transparent;
+        }
+        .search>input{
+            text-indent: 30px;
+        }
+        
+        .form-control{
+            border-radius: 20px;
+        }
+        .calligraphy_text{
+            top:40%;
+            position: absolute;
+            color: aliceblue;
+            text-align: center;
+        }
+        .calligraphy_text>h4{
+            
+            margin-top: 30px;
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid"></div>
+    <!-- 视频背景开始 -->
+    <div class="calligraphy_video_container">
+        <video class="fullscreenvideo"  id="bgvid" playsinline="" autoplay="" muted="ture" loop="">
+            <source src="videos/Writing - 107240.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- 视频背景结束-->
+    
+        <div class="row align-items-center justify-content-center ">
+            
+            
+            <form class="search">
+                <input class="form-control" type="text" placeholder="请输入内容......">
+                <button><img src="img/icons8-search-24.png"></button>
+            </form>
+
+            <div class="calligraphy_text">
+                <h1>三人行书法协会书法作品展示</h1>
+                <h4>Exhibition of calligraphy works by the Three-Man Calligraphy Association</h4>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
