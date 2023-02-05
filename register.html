@@ -62,110 +62,16 @@
             src: url('fonts/OptimizedTitleBlack.ttf');
         }
 
-        .dadanshise {
-            height: 20px;
-            font-size: 105px;
-            font-family: 'youshe';
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: 250px;
-            /* margin-left: 100px; */
-            letter-spacing: 15px;
-            width: 600px;
-            height: 170px;
-        }
 
-        .thedadanshise {
-            height: 20px;
-            font-size: 50px;
-            font-family: 'youshe';
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: 250px;
-            /* margin-left: 100px; */
-            letter-spacing: 15px;
-            width: 600px;
-            height: 170px;
-        }
 
-        .thedadanshise1 {
-            font-size: 50px;
-            font-family: 'youshe';
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: 120px;
-            margin-left: 30px;
-            letter-spacing: 10px;
-            width: 600px;
-            height: 170px;
-        }
 
-        .thesmshow {
-            font-size: 40px;
-            font-family: 'Rockstar';
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: -180px;
-            margin-left: 70px;
-            opacity: 0.7;
-            width: 600px;
-            height: 150px;
-        }
 
-        .thesmshow1 {
-            font-size: 50px;
-            font-family: 'youshe';
-            color: rgb(255, 255, 255);
-            position: relative;
-            margin-left: 40px;
-            top: -150px;
-            width: 600px;
-            height: 150px;
-        }
+        .frombox {
 
-        .dadanshise1 {
-            font-size: 100px;
-            font-family: 'youshe';
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: 180px;
-            margin-left: 50px;
-            letter-spacing: 10px;
-            width: 600px;
-            height: 170px;
-        }
+            background: rgba(255, 255, 255, 0.28);
+            backdrop-filter: blur(12px);
+            border-radius: 4px;
 
-        @font-face {
-            font-family: 'Rockstar';
-            /* 这个名字可以自己定义 */
-            src: url('fonts/Rockstar-ExtraBold.otf');
-        }
-
-        .dadanshise2 {
-            font-size: 40px;
-            font-family: 'Rockstar';
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: -180px;
-            margin-left: 70px;
-            opacity: 0.7;
-            width: 600px;
-            height: 150px;
-        }
-
-        .therow {
-            transform: translateY(50%);
-            position: absolute;
-            right: 10%;
-            top: -220px;
-            height: 500px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
         }
     </style>
 
@@ -183,11 +89,44 @@
         </video>
     </div>
     <div class="container-fluid">
-        <div class="row therow">
+        <div class="">
+            <div class="col-lg-7 col-xl-7 col-md-7 col-sm-3">
+
+            </div>
+            <div class=" col-lg-4 col-xl-4 col-md-4 col-sm-6">
+
+                <div class="frombox mt-5">
+                    <form action="">
+                        <label class="text-content" style="margin-top: 20px; font-size: 24px; "></label><br>
+                        <h2 class="text-center" style="font-weight: bold; font-size: 24px; color: #ffffff;">登录</h2>
+                        <label for="inputEmail" class="" style="margin-top: 10px;">Email address</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required
+                            autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        <p class="mt-5 mb-3 text-muted">&copy; 2017-2022</p>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="col-lg-1 col-xl-1 col-md-1 col-sm-3">
+
+            </div>
 
 
 
         </div>
+
+
+
+
     </div>
 
 
