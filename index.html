@@ -19,7 +19,7 @@
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/template-web.js"></script>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/put.css">
 
 
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
@@ -509,17 +509,22 @@
             width: 180px;
         }
 
-        .calligraphy_icon>div {
-            margin-top: 15px;
+        /* .calligraphy_icon>div {
+            margin-top: -1px;
+        } */
+        .calligraphy_introduce {
+            font-size: 14px;
+            text-align: center;
         }
 
         /*滑动*/
         .slide-container {
             margin-top: 1x;
-            max-width: 1300px;
+            max-width: 1200px;
             width: 100%;
+            max-height: 700px;
             /* background-color: rgb(222, 219, 219); */
-            padding: 40px 20px;
+            padding: 0 20px 40px 20px;
             /* --swiper-navigation-size:0; */
             overflow-x: hidden;
         }
@@ -535,12 +540,12 @@
             background-color: rgb(255, 255, 255);
             position: relative;
             box-shadow: 0 4px 6px 0 rgba(39, 36, 36, 0.24);
-
+            background-color: rgba(255, 255, 255, 0.15);
 
         }
 
         .carde:hover {
-            box-shadow: 1px 7px 9px 1px rgba(0, 0, 0, 0.24);
+            box-shadow: 1px 7px 8px 1px rgba(0, 0, 0, 0.24);
             cursor: pointer;
             transition: all 0.3s ease;
 
@@ -564,6 +569,7 @@
             border-radius: 15px 15px 0 0;
 
         }
+
 
         .card-image {
             position: relative;
@@ -727,7 +733,7 @@
                         <a class="nav-link" href="">新闻</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">作品展示</a>
+                        <a class="nav-link" href="calligraphy_works.html">作品展示</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">教学</a>
@@ -1130,8 +1136,9 @@
 
             </div>
         </div>
-        <!-- <p>北宋大文豪苏轼写过两篇《赤壁赋》，后人称之为《前赤壁赋》和《后赤壁赋》，都是中国古代文学史上的名篇，同时也是著名的书法作品。苏轼被贬为黄州（今湖北黄冈）团练副使的1082年秋、冬，先后两次游览了黄州附近的赤壁，写下这两篇赋。他的前后赤壁赋反映了这时的思想情感。</p>
-            -->
+        <p class="calligraphy_introduce">北宋大文豪苏轼写过两篇《赤壁赋》，后人称之为《前赤壁赋》和《后赤壁赋》，都是中国古代文学史上的名篇。</p>
+
+
         <div class="row slide-container swiper ">
             <div class="card-wrapper swiper-wrapper">
                 <div class="carde swiper-slide">
