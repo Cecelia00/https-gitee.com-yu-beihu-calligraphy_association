@@ -7,17 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <!--Swiper CSS-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/popper.min.js"></script>
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/template-web.js"></script>
+    <link rel="stylesheet" href="css/put.css">
+
+
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
@@ -153,7 +157,7 @@
             height: 100%;
             width: 0;
             /* border-radius: 3px; */
-            background-color: #0d0c0c;
+            background-color: #BB1013;
             z-index: -1;
             -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
             box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
@@ -192,7 +196,7 @@
             height: 100%;
             width: 0;
             border-radius: 3px;
-            background-color: #0d0c0c;
+            background-color: #BB1013;
             z-index: -1;
             transition: all 250ms
         }
@@ -351,8 +355,10 @@
         .button--submit {
             border-radius: 0 6px 6px 0;
             border: none;
-            background-color: #0d0c0c;
+            background-color: #BB1013;
             color: #fff;
+            font-size: 10px;
+            font-weight: bolder;
         }
 
 
@@ -365,7 +371,7 @@
             width: 7.5em;
             height: 2.3em;
             /* margin: 0.5em; */
-            background: black;
+            background: #BB1013;
             color: white;
             border: none;
             border-radius: 0.625em;
@@ -400,121 +406,295 @@
             transition: all 0.5s;
         }
 
-        /*作品展示滑动页*/
-
-        /* #key-links-words2>div{
-            block-size: 320px;
-            background-color: #fff;
-            /* 设置宽高比 */
-        /* aspect-ratio: 1;
-            border-radius: 10px;
-            box-shadow: 0 0 5px 5px rgba(173, 173, 173, 0.3);
-        } */
-        .box {
-            margin-top: 20px;
-        }
-
-        img {
-            border: 0
-        }
-
-        .lb1 {
-            width: 1200px;
-            margin: 50px auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            height: 200px;
-            position: relative;
-        }
-
-
-        .lb1 .swiper-slide a {
-            width: auto;
-            height: 200px;
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: 400;
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            margin-right: 0;
-            cursor: pointer;
-            display: flex;
-            overflow: hidden;
-            cursor: pointer;
-            display: block;
-            text-align: center;
+        /* <!-- 新闻开始 --> */
+        .news {
             width: 100%;
+            height: 557px;
+            background: url("img/H0SP1E.jpg") no-repeat center center/cover;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 557px;
         }
 
-        .lb1 .swiper-slide a img {
-            width: auto;
+
+
+        .more {
+            background: none;
+            border: none;
+            /* padding: 2px 10px; */
+            border-radius: 10px;
+            float: right;
+        }
+
+        .moref2 {
+            background: none;
+            border: none;
+            /* padding: 2px 10px; */
+            border-radius: 10px;
+            float: right;
+            color: rgb(255, 255, 255);
+        }
+
+        .more:hover {
+            background: rgba(170, 170, 170, 0.062);
+            transition: 0.5s;
+        }
+
+        .more svg {
+            color: #fff;
+        }
+
+        .cakf1 {
+
+
+            background: rgba(255, 255, 255, 0.47);
+            backdrop-filter: blur(2px);
+            border-radius: 4px;
+        }
+
+        .cakf2 {
+
+
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(0px);
+            border-radius: 4px;
+        }
+
+        .cards {
+            width: 190px;
+            height: 254px;
+            margin: 0 auto;
+            background-color: #F8FBFE;
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        .tools {
+            display: flex;
+            align-items: center;
+            padding: 9px;
+        }
+
+        .circle {
+            padding: 0 4px;
+        }
+
+        .box {
+            display: inline-block;
+            align-items: center;
+            width: 10px;
+            height: 10px;
+            padding: 1px;
+            border-radius: 50%;
+        }
+
+        .red {
+            background-color: #ff605c;
+        }
+
+        .yellow {
+            background-color: #ffbd44;
+        }
+
+        .green {
+            background-color: #00ca4e;
+        }
+
+        /* 新闻结束 */
+        /*作品展示开始*/
+        /*图标*/
+        .calligraphy_icon {
+            margin: 0 auto;
+            width: 180px;
+        }
+
+        /* .calligraphy_icon>div {
+            margin-top: -1px;
+        } */
+        .calligraphy_introduce {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /*滑动*/
+        .slide-container {
+            margin-top: 1x;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 700px;
+            /* background-color: rgb(222, 219, 219); */
+            padding: 0 20px 40px 20px;
+            /* --swiper-navigation-size:0; */
+            overflow-x: hidden;
+        }
+
+        .slide-content {
+            margin: 0 40px;
+        }
+
+        .carde {
+            width: 200px;
+            height: 400px;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            box-shadow: 0 4px 6px 0 rgba(39, 36, 36, 0.24);
+            background-color: rgba(255, 255, 255, 0.15);
+
+        }
+
+        .carde:hover {
+            box-shadow: 1px 7px 8px 1px rgba(0, 0, 0, 0.24);
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+        }
+
+        .image-content,
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* padding: -10px -14px; */
+
+        }
+
+        .image-content {
+            position: relative;
+            row-gap: 5px;
+            width: 100%;
+            height: 230px;
+            border-radius: 15px 15px 0 0;
+
+        }
+
+
+        .card-image {
+            position: relative;
+            height: 150px;
+            width: 150px;
+
+        }
+
+
+        .card-image,
+        .card-img {
             height: 100%;
-            display: block;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
         }
 
-        .lb1 .swiper-slide {
-            width: auto;
+        .name {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #707070;
+            text-align: center;
+            padding: 2px;
+        }
+
+        .button {
+            border: none;
+            font-size: 16px;
+            color: #FFF;
+            padding: 8px 16px;
+            background-color: rgb(225, 65, 65);
+            border-radius: 12px;
+
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 4.5em;
+            height: 2.3em;
+
+            margin: 2px -50px;
+            position: relative;
+            left: 55%;
+
 
         }
 
-        .lb1 .swiper-button-prev {
-            left: -39px;
-            width: 34px;
-            height: 34px;
-            background: url(img/biaoqian-arrowL.png) center no-repeat;
-            border-radius: 2px;
-            top: calc(50% - 17px);
+        .button:hover {
+            background-color: rgb(207, 46, 46);
+            box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.24);
+
         }
 
-        .lb1 .swiper-button-prev:hover {
-            background: url(img/biaoqian-arrowL-sel.png) center no-repeat;
+        /*左右按钮*/
+        .swiper-button-prev {
+            color: rgba(0, 0, 0, 0) !important;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l4.2%2C4.2L8.4%2C22l17.8%2C17.8L22%2C44L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+            position: absolute;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(130, 127, 127, 0.3);
+            text-decoration: none;
+            border-radius: 45px;
+            border-radius: 45px;
+            /* display: none; */
+            z-index: 2;
+
+
         }
 
-        .lb1 .swiper-button-next {
-            right: -39px;
-            width: 34px;
-            height: 34px;
-            background: url(img/biaoqian-arrowR.png) center no-repeat;
-            border-radius: 2px;
-            top: calc(50% - 17px);
+        .swiper-button-next {
+            color: rgba(0, 0, 0, 0) !important;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L5%2C44l-4.2-4.2L18.6%2C22L0.8%2C4.2L5%2C0z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+            position: absolute;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(130, 127, 127, 0.3);
+            border-radius: 45px;
+            border-radius: 45px;
+            /* display: none; */
+            z-index: 2;
+
         }
 
-        .lb1 .swiper-button-next:hover {
-            background: url(img/biaoqian-arrowR-sel.png) center no-repeat;
+        .hide {
+            display: none;
         }
 
-        .swiper {
-            width: 700px;
-            height: 450px;
-        }
-        .swiper img{
-            width: 700px;
-            height: 450px;
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            color: #000;
+            transition: opacity 0.5s;
         }
 
-        /* 响应式 */
-        /* @media (max-width:991px) {
-    
-    .lb1 {
-               width: 100%;
-               text-align: center;
-    }
-    .lb1 .swiper-slide {
-        max-width: 80%;
-        margin-left: 0;
-    }
-} */
-        /*屏幕宽度小于600px,改变布局和样式*/
-        /* @media screen and (max-width:600px) {
-           .swiper-wrapper>div {
-               float: none;
-               width: 100%;
-               text-align: center;
-           }
-       } */
-        /*作品展示页结束*/
+        .swiper-pagination-bullet {
+            background-color: #f39798;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: rgb(225, 65, 65);
+        }
+
+
+
+        /*作品展示结束*/
+
+        /* 活动中心开始 */
+        .hdxw-right ul li {
+            height: 36px;
+            line-height: 36px;
+            /* position: relative; */
+            /* text-overflow: ellipsis; */
+            white-space: nowrap;
+            /* overflow: hidden; */
+        }
+
+        /* 活动中心结束 */
     </style>
 
 </head>
@@ -553,14 +733,14 @@
                         <a class="nav-link" href="">新闻</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">作品展示</a>
+                        <a class="nav-link" href="calligraphy_works.html">作品展示</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">教学</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" id="" href="">关于我们</a>
+                        <a class="nav-link" id="" href="about.html">关于我们</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
@@ -569,7 +749,7 @@
                             aria-expanded="false" aria-controls="collapseExample">
                             <i class="bi bi-search">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    style="color: #BB1013;" class="bi bi-search" viewBox="0 0 16 16">
                                     <path
                                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg>
@@ -642,18 +822,18 @@
     <!--轮播图结束-->
 
     <!-- 活动要闻开始 -->
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="row mt-4">
             <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                    class="bi bi-newspaper" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    style="color: #BB1013;" class=" bi bi-newspaper" viewBox="0 0 16 16">
                     <path
                         d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
                     <path
                         d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
                 </svg>
                 <span class="align-middle"
-                    style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">活动要闻</span>
+                    style="font-size: 24px;font-weight:bolder;font-family: YuWeisform; ">活动要闻</span>
 
             </div>
             <div class="col">
@@ -661,211 +841,475 @@
                     <button class="moreActivity "> 进入活动中心
                     </button>
                 </div>
-
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 活动内容开始 -->
-    <div class="row">
-        <div class="col">
-            <!--轮播图-->
-        <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/1.png"/></div>
-            <div class="swiper-slide"><img src="img/2.png"/></div>
-            <div class="swiper-slide"><img src="img/3.png"/></div>
-            <div class="swiper-slide"><img src="img/4.png"/></div>
-        </div>
-       
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-        
-        <!-- 如果需要导航按钮 -->
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
-        
-        <!-- 如果需要滚动条 -->
-        <!-- <div class="swiper-scrollbar"></div> -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-6 col-xl-6 col-md-6" style="height: 500px;">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        style="color: #BB1013;" class=" bi bi-newspaper" viewBox="0 0 16 16">
+                        <path
+                            d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
+                        <path
+                            d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+                    </svg>
+                    <span class="align-middle"
+                        style="font-size: 24px;font-weight:bolder;font-family: YuWeisform; color: #BB1013;">社团活动快讯</span>
 
-    </div> 
-    </div>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script>        
-        var mySwiper = new Swiper ('.swiper', {
-        //   direction: 'vertical', // 垂直切换选项
-        speed:2500,
-        autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-        waitForTransition: false,
-        pauseOnMouseEnter: true,
-        },//自动切换
-          loop: true, // 循环模式选项
-          effect: 'fade',//切换效果
-          
-          // 如果需要分页器
-          pagination: {
-            el: '.swiper-pagination',
-            clickable :true,
-          },
-          
-          
-          // 如果需要前进后退按钮
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          
-          // 如果需要滚动条
-        //   scrollbar: {
-        //     el: '.swiper-scrollbar',
-        //     dragSize: 30,
-        //   },
-
-          //鼠标方向控制
-          mousewheel: {
-            invert: false,
-        },
-        }) 
-        
-        //分页按钮函数
-        for(i=0;i<mySwiper.pagination.bullets.length;i++){
-             mySwiper.pagination.bullets[i].onmouseover=function(){
-                this.click();
-            };
-        }
-        //鼠标置于swiper时暂停自动切换，鼠标离开时恢复自动切换函数。
-        mySwiper.el.onmouseover = function(){
-                mySwiper.autoplay.stop();
-            }
-            mySwiper.el.onmouseout = function(){
-                mySwiper.autoplay.start();
-            }     
-        </script>
-        <!--轮播图结束-->
-        <div class="col">
-            <ul class=" ">
-                <li class="">
-                    <a class="" href="#">活动1</a>
+                    <a class="mt-2" href="" style="float:right;   color: #999;
+                    font-size: 16px; ">MORE+</a>
                     <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动2</a>
-                    <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动3</a>
-                    <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动4</a>
-                    <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动5</a>
-                    <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动6</a>
-                    <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动7</a>
-                    <hr>
-                </li>
-                <li class="">
-                    <a class="" href="#">活动8</a>
-                    <hr>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    <!-- 活动要闻结束 -->
-    <!--作品展示开始-->
-
-
-    <div class="container-fluid box">
-        <div class="row ">
-            <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-images"
-                    viewBox="0 0 16 16">
-                    <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                    <path
-                        d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z" />
-                </svg>
-                <span class="align-middle"
-                    style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示</span>
+                    <div class="slideshow-box col">
+                        <div class="img-box" id="img-box">
+                            <a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a><a
+                                href=""></a><a href=""></a>
+                        </div>
+                        <div class="img-btn-box" id="img-btn-box">
+                            <a href="">图片1</a><a href="">图片2</a><a href="">图片3</a><a href="">图片4</a><a href="">图片5</a><a
+                                href="">图片6</a><a href="">图片7</a><a href="">图片8</a>
+                        </div>
+                    </div>
+                </div>
+                <script src="index.js"></script>
             </div>
+            <div class="col-lg-5 col-xl-6 col-md-6" style="height: 500px;">
+                <div>
+                    <div class="row ">
+                        <div class="col">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                style="color: #BB1013;" class=" bi bi-newspaper" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
+                                <path
+                                    d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+                            </svg>
+                            <span class="align-middle"
+                                style="font-size: 24px;font-weight:bolder;font-family: YuWeisform; ">活动要闻</span>
 
-
-        </div>
-        <div class="lb1 row" style="width: 1200px; margin: 0 auto;">
-            <div class="swiper-container swiper-container1">
-                <div class="swiper-wrapper" id="key-links-words2">
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="" alt="">
-                        </a>
+                        </div>
+                        <div class="col">
+                            <div class="float-right  mt-1">
+                                <button class="moreActivity "> 进入活动中心
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                    <hr>
+                    <div class="hdxw-right">
+                        <ul>
+                            <li class=""><a href="https://news.hnu.edu.cn/info/1102/33597.htm" title="校领导走访慰问并看望寒假留校学生"
+                                    target="_blank">
+                                    <span class="div">校领导走访慰问并看望寒假留校学生</span>
 
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/1.png" alt="">
-                        </a>
+                                </a>
+                                <span style="float: right;">01/12</span>
+                            </li>
+                            <li class="mt-2"><a href="https://news.hnu.edu.cn/info/1102/33581.htm"
+                                    title="校党委中心组开展2023年第1次集中学习" target="_blank">
+                                    <span class="div">校党委中心组开展2023年第1次集中学习</span>
+                                </a><span style="float: right;">01/06</span></li>
+                            <li class="mt-2"><a href="https://news.hnu.edu.cn/info/1102/33569.htm"
+                                    title="新建天马学生公寓18、20栋将投入使用" target="_blank">
+                                    <span class="div">新建天马学生公寓18、20栋将投入使用</span>
+                                </a><span style="float: right;">01/05</span></li>
+                            <li class="mt-2"><a href="https://news.hnu.edu.cn/info/1102/33564.htm"
+                                    title="《JACS》封面论文：化工院白玉罡教授课题组在胞内催化领域取得新进展" target="_blank">
+                                    <span class="div">《JACS》封面论文：化工院白玉罡教授</span>
+                                </a><span style="float: right;">01/02</span></li>
+                            <li class="mt-2"><a href="https://news.hnu.edu.cn/info/1102/33555.htm"
+                                    title="湖南大学2022年十大新闻揭晓" target="_blank">
+                                    <span class="div">湖南大学2022年十大新闻揭晓</span>
+                                </a><span style="float: right;">01/02</span></li>
+                            <li class="mt-2"><a href="https://mp.weixin.qq.com/s/LqCam2dSW_pKatkyyL9A3Q"
+                                    title="杨微：“湖大给了我顶天立地的舞台！”" target="_blank">
+                                    <span class="div">杨微：“湖大给了我顶天立地的舞台！”</span>
+                                </a><span style="float: right;">12/29</span></li>
+                            <li class="mt-2"><a href="https://mp.weixin.qq.com/s/rko7mZcYi57-EEB3m8V_sQ"
+                                    title="王少飞：“士为知己者死，我予湖大亦如此！”" target="_blank">
+                                    <span class="div">王少飞：“士为知己者死，我予湖大亦如此！”</span>
+                                </a><span style="float: right;">12/28</span></li>
+                            <li class="mt-2"><a href="https://news.hnu.edu.cn/info/1102/33558.htm"
+                                    title="汤琳教授科普新书《奇妙环境馆》出版" target="_blank">
+                                    <span class="div">汤琳教授科普新书《奇妙环境馆》出版</span>
+                                </a><span style="float: right;">12/27</span></li>
+                            <li class="mt-1"><a href="https://news.hnu.edu.cn/info/1102/33558.htm"
+                                    title="汤琳教授科普新书《奇妙环境馆》出版" target="_blank">
+                                    <span class="div">汤琳教授科普新书《奇妙环境馆》出版</span>
+                                </a><span style="float: right;">12/27</span></li>
+                            <div class="clear"></div>
+                        </ul>
                     </div>
-
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/2.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/3.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/4.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/1.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/2.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="javascript:" class="ellipsis">
-                            <img src="img/3.png" alt="">
-                        </a>
-                    </div>
-
-
-
                 </div>
             </div>
-            <div class="swiper-button-next swiper-button-next1"></div>
-            <div class="swiper-button-prev swiper-button-prev1"></div>
+
+        </div>
+    </div>
+    <!-- 活动内容结束 -->
+
+    <!-- 动态开始 -->
+    <div class="container-fluid news " style="margin-top: 10px;">
+        <div class="row">
+            <div class="f1 col-xl-5 col-lg-5 col-md-6 col-sm-4 mt-4" style=" height: 544px;">
+                <div class="" style="color: #ffffff;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        style="color: #ffffff;" class="bi bi-binoculars-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z" />
+                    </svg>
+                    <span class="align-middle ml-2" style="font-weight:normal;font-size: calc(0.5em + 1vw);">最新动态 /
+                        Latest
+                        developments</span>
+                    <button class="more">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                            class="bi bi-three-dots" viewBox="0 0 16 16">
+                            <path
+                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="cakf1" style="padding: 26px 26px;">
+                    <img src="https://www.hnu.edu.cn/__local/2/42/FF/249D31135801A9F2301D2D96C25_9038FBAF_401F7.png"
+                        class="card-img-top" alt="...">
+                    <div class="mt-3" style=" color: rgb(255, 255, 255);">
+                        <div class="card-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" style="color:#ffffff ;"
+                                fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <span class="align-middle ml-2 " style="font-size: calc(0.5em + 0.9vw);">2022年12月28日
+                                上午9点15分</span>
+                        </div>
+                        <div class="card-title mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                fill="currentColor" class="bi bi-browser-safari" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm.25-14.75v1.5a.25.25 0 0 1-.5 0v-1.5a.25.25 0 0 1 .5 0Zm0 12v1.5a.25.25 0 1 1-.5 0v-1.5a.25.25 0 1 1 .5 0ZM4.5 1.938a.25.25 0 0 1 .342.091l.75 1.3a.25.25 0 0 1-.434.25l-.75-1.3a.25.25 0 0 1 .092-.341Zm6 10.392a.25.25 0 0 1 .341.092l.75 1.299a.25.25 0 1 1-.432.25l-.75-1.3a.25.25 0 0 1 .091-.34ZM2.28 4.408l1.298.75a.25.25 0 0 1-.25.434l-1.299-.75a.25.25 0 0 1 .25-.434Zm10.392 6 1.299.75a.25.25 0 1 1-.25.434l-1.3-.75a.25.25 0 0 1 .25-.434ZM1 8a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 0 .5h-1.5A.25.25 0 0 1 1 8Zm12 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 1 1 0 .5h-1.5A.25.25 0 0 1 13 8ZM2.03 11.159l1.298-.75a.25.25 0 0 1 .25.432l-1.299.75a.25.25 0 0 1-.25-.432Zm10.392-6 1.299-.75a.25.25 0 1 1 .25.433l-1.3.75a.25.25 0 0 1-.25-.434ZM4.5 14.061a.25.25 0 0 1-.092-.341l.75-1.3a.25.25 0 0 1 .434.25l-.75 1.3a.25.25 0 0 1-.342.091Zm6-10.392a.25.25 0 0 1-.091-.342l.75-1.299a.25.25 0 1 1 .432.25l-.75 1.3a.25.25 0 0 1-.341.09ZM6.494 1.415l.13.483a.25.25 0 1 1-.483.13l-.13-.483a.25.25 0 0 1 .483-.13ZM9.86 13.972l.13.483a.25.25 0 1 1-.483.13l-.13-.483a.25.25 0 0 1 .483-.13ZM3.05 3.05a.25.25 0 0 1 .354 0l.353.354a.25.25 0 0 1-.353.353l-.354-.353a.25.25 0 0 1 0-.354Zm9.193 9.193a.25.25 0 0 1 .353 0l.354.353a.25.25 0 1 1-.354.354l-.353-.354a.25.25 0 0 1 0-.353ZM1.545 6.01l.483.13a.25.25 0 1 1-.13.483l-.483-.13a.25.25 0 1 1 .13-.482Zm12.557 3.365.483.13a.25.25 0 1 1-.13.483l-.483-.13a.25.25 0 1 1 .13-.483Zm-12.863.436a.25.25 0 0 1 .176-.306l.483-.13a.25.25 0 1 1 .13.483l-.483.13a.25.25 0 0 1-.306-.177Zm12.557-3.365a.25.25 0 0 1 .176-.306l.483-.13a.25.25 0 1 1 .13.483l-.483.13a.25.25 0 0 1-.306-.177ZM3.045 12.944a.299.299 0 0 1-.029-.376l3.898-5.592a.25.25 0 0 1 .062-.062l5.602-3.884a.278.278 0 0 1 .392.392L9.086 9.024a.25.25 0 0 1-.062.062l-5.592 3.898a.299.299 0 0 1-.382-.034l-.005-.006Zm3.143 1.817a.25.25 0 0 1-.176-.306l.129-.483a.25.25 0 0 1 .483.13l-.13.483a.25.25 0 0 1-.306.176ZM9.553 2.204a.25.25 0 0 1-.177-.306l.13-.483a.25.25 0 1 1 .483.13l-.13.483a.25.25 0 0 1-.306.176Z" />
+                            </svg>
+                            <span class="align-middle ml-2" style="font-size: calc(0.5em + 0.9vw);">二教教学楼第4012教室</span>
+                        </div>
+                        <div class="card-title mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
+                            </svg>
+                            <span class="align-middle ml-2" style="font-size: calc(0.5em + 0.9vw);">二教教学楼第4012教室</span>
+                        </div>
+                        <a href="#" class="btn mt-2"
+                            style="background-color: #BB1013;color: rgb(255, 255, 255);">查看更多</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="f2 col-xl-7 col-lg-7 col-md-6 col-sm-8 mt-4 d-none d-sm-block"
+                style="color: rgb(255, 255, 255); height: 544px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-clipboard-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1A2.5 2.5 0 0 0 6.5 5h3A2.5 2.5 0 0 0 12 2.5v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Z" />
+                </svg>
+                <span class="align-middle ml-2" style="font-weight:normal;font-size: calc(0.5em + 1vw);">历史动态 /
+                    Historical developments</span>
+                <button class="moref2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+                        </path>
+                    </svg>
+                </button>
+
+                <div class="row mt-1 cakf2 ">
+                    <div class="col">
+                        <div class="cad mt-4">
+                            <img src="https://www.hnu.edu.cn/__local/2/42/FF/249D31135801A9F2301D2D96C25_9038FBAF_401F7.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="date-t text-center col-xl-3 col-lg-3 col-md-12 col-sm-12" style="font-size: calc(0.5em + 0.9vw); background: rgba(255,255,255, 0.4);
+                                        backdrop-filter: blur(21px);
+                                        border-radius: 4px; "> 2023-01-02
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8 ml-2 col-md-12 col-sm-12" style=" font-size: calc(0.3em + 0.9vw);padding: 0 0; background: rgba(101,118,136,
+                                        0.11); backdrop-filter: blur(12px); border-radius: 0px;">
+                                                《JACS》封面论文：化工院白玉罡教授课题组在胞内催化领域取得新进展
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="col-12 mt-5">
+                                        <div class="row">
+                                            <div class="date-t text-center col-xl-3 col-lg-3 col-md-12 col-sm-12" style="font-size: calc(0.5em + 0.9vw); background: rgba(255,255,255, 0.4);
+                                        backdrop-filter: blur(21px);
+                                        border-radius: 4px; "> 2023-01-02
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8 ml-2 col-md-12 col-sm-12" style=" font-size: calc(0.3em + 0.9vw);padding: 0 0; background: rgba(101,118,136,
+                                        0.11); backdrop-filter: blur(12px); border-radius: 0px;">
+                                                《JACS》封面论文：化工院白玉罡教授课题组在胞内催化领域取得新进展
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cad mt-4">
+                            <img src="https://www.hnu.edu.cn/__local/2/42/FF/249D31135801A9F2301D2D96C25_9038FBAF_401F7.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="date-t text-center col-xl-3 col-lg-3 col-md-12 col-sm-12" style="font-size: calc(0.5em + 0.9vw); background: rgba(255,255,255, 0.4);
+                                        backdrop-filter: blur(21px);
+                                        border-radius: 4px; "> 2023-01-02
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8 ml-2 col-md-12 col-sm-12" style=" font-size: calc(0.3em + 0.9vw);padding: 0 0; background: rgba(101,118,136,
+                                        0.11); backdrop-filter: blur(12px); border-radius: 0px;">
+                                                《JACS》封面论文：化工院白玉罡教授课题组在胞内催化领域取得新进展
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="col-12 mt-5">
+                                        <div class="row">
+                                            <div class="date-t text-center col-xl-3 col-lg-3 col-md-12 col-sm-12" style="font-size: calc(0.5em + 0.9vw); background: rgba(255,255,255, 0.4);
+                                        backdrop-filter: blur(21px);
+                                        border-radius: 4px; "> 2023-01-02
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8 ml-2 col-md-12 col-sm-12" style=" font-size: calc(0.3em + 0.9vw);padding: 0 0; background: rgba(101,118,136,
+                                        0.11); backdrop-filter: blur(12px); border-radius: 0px;">
+                                                《JACS》封面论文：化工院白玉罡教授课题组在胞内催化领域取得新进展
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 动态结束 -->
+
+    <!--作品展示开始-->
+    <div class="container-fluid">
+        <div class="row mt-4 calligraphy_icon">
+            <div class="col ">
+                <svg class="bi bi-file-richtext" width="40" height="40" viewBox="0 0 16 16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z" />
+                    <path fill-rule="evenodd"
+                        d="M4.5 11.5A.5.5 0 0 1 5 11h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z" />
+                </svg>
+                <span class="align-middle" style="font-size: 24px;font-weight:bolder;font-family: YuWeisform;">作品展示
+                </span>
+
+            </div>
+        </div>
+        <p class="calligraphy_introduce">北宋大文豪苏轼写过两篇《赤壁赋》，后人称之为《前赤壁赋》和《后赤壁赋》，都是中国古代文学史上的名篇。</p>
+
+
+        <div class="row slide-container swiper ">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="carde swiper-slide">
+                    <div class="image-content">
+
+                        <div class="card-image">
+                            <img src="img/work1.jpg" class="card-img" alt="">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="card-text">
+                            <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carde swiper-slide">
+                    <div class="image-content">
+
+                        <div class="card-image">
+                            <img src="img/1.png" class="card-img" alt="">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="card-text">
+                            <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carde swiper-slide">
+                    <div class="image-content">
+
+                        <div class="card-image">
+                            <img src="img/1.png" class="card-img" alt="">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="card-text">
+                            <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carde swiper-slide">
+                    <div class="image-content">
+
+                        <div class="card-image">
+                            <img src="img/1.png" class="card-img" alt="">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="card-text">
+                            <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carde swiper-slide">
+                    <div class="image-content">
+
+                        <div class="card-image">
+                            <img src="img/1.png" class="card-img" alt="">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="card-text">
+                            <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carde swiper-slide">
+                    <div class="image-content">
+
+                        <div class="card-image">
+                            <img src="img/1.png" class="card-img" alt="">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="card-text">
+                            <h3 class="name">千里江山图</h2>
+                                <p class="description">李大帅亲笔之作不止现在就是而且四折页</p>
+                                <button class="button">详情</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"> </div>
+            <!--分页器-->
+            <div class="swiper-pagination"></div>
+            <!-- 滚动条
+            <div class="swiper-scrollbar"></div> -->
+        </div>
+    </div>
+    <!--作品展示结束-->
+
+
+    <!-- 社团介绍开始 -->
+    <div class="container-fluid">
+        <div class="row mb-2 mt-5">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0">Featured post</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Post title</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!--作品展示结束-->
+    <!-- 社团介绍结束 -->
     <div style="height: 900px;"></div>
 
 
 </body>
+<!--Swiper JS-->
+<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+
 <script>
     $(window).scroll(function () {
         if ($(".navbar ").offset().top > 50) {
@@ -879,7 +1323,6 @@
         //1.获取元素
         var prev = document.querySelector('.prev');
         var next = document.querySelector('.next');
-        var ju = document.querySelector('.carouselExampleIndicators');
 
         //轮播图：鼠标移上图片显示左右按钮
         carouselExampleIndicators.addEventListener('mouseenter', function () {
@@ -892,6 +1335,8 @@
             prev.style.display = 'none';
             next.style.display = 'none';
         })
+
+
     })
 
     // 点击搜索栏展现消失
@@ -913,18 +1358,51 @@
 </script>
 <!--作品展示-->
 <script>
-    var swiper = new Swiper('.swiper-container1', {
-        slidesPerView: 'auto',/*根据slide的宽度自动调整展示数量*/
-        spaceBetween: 20,/*左右的间距20px*/
-        centeredSlides: false,/*是否居中显示*/
-        slidesPerGroup: 5,/*定义slides的5个为一组*/
-        navigation: {
-            nextEl: ".swiper-button-next1",
-            prevEl: ".swiper-button-prev1",
+    var swiper = new Swiper(".slide-container", {
+        slidesPerView: 3,
+        // slidesPerGroup: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor: 'true',
+        // //鼠标滚动
+        // mousewheel: true,
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
         },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+        },
+
     });
+
+    //鼠标覆盖停止自动切换与隐藏前进后退按钮
+    swiper.el.onmouseover = function () {
+        swiper.navigation.$nextEl.removeClass('hide');
+        swiper.navigation.$prevEl.removeClass('hide');
+    }
+    //鼠标覆盖停止自动切换与隐藏前进后退按钮
+    swiper.el.onmouseout = function () {
+        swiper.navigation.$nextEl.addClass('hide');
+        swiper.navigation.$prevEl.addClass('hide');
+    }
+
 </script>
-
-
 
 </html>

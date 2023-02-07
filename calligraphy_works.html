@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三人行书法协会作品展示</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- 下拉菜单的，前面的用不了 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+       .a {
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            background-color: #393636;
+       }
+        .calligraphy_video_container{
+            width: 100%; 
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            /* background-color: brown; */
+            
+        }
+        .fullscreenvideo{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: fill;
+            overflow: hidden;
+            /* z-index: -9999; */
+        }
+        
+        .calligraphy_search{
+            width: 350px;
+            height: 70px;
+            border: none;
+            position: absolute;
+            
+            /* /* left: 35%; */
+            top: 65%; 
+            text-align: center;
+            
+            
+        }
+        .calligraphy_search>button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            border: none;
+            text-align: center;
+            z-index: 1;
+            background: transparent;
+        }
+        .calligraphy_search>input{
+            text-indent: 20px;
+        }
+        
+        .calligraphy_input{
+            border-radius: 20px;
+        }
+        .calligraphy_text{
+            top:40%;
+            position: absolute;
+            color: aliceblue;
+            text-align: center;
+        }
+        .calligraphy_text>h4{
+            
+            margin-top: 30px;
+        }
+
+        /* 导航 */
+        .calligraphy_works_nav{
+            text-decoration: none;
+            /* width: 260px; */
+            /* background: #db5050; */
+            /* background-color: #393636; */
+        }
+        
+        .calligraphy_works_nav_text{
+            margin-top: 25px;
+            font-size: 15px;
+            color: #4e4c4c;
+            /* background:  #db5050; */
+            /* text-decoration: none; */
+        }
+        .calligraphy_works_nav_text:hover{
+            margin-top: 25px;
+            color: #db5050;
+            box-shadow: 0 1px 3px 0 #da4a4a;
+            /* text-decoration: none; */
+        }
+        .excellent_works_one {
+            width: 340px;
+            height: 280px;
+            border-radius: 7px;
+            background-color: #da4a4a;
+            position: relative;
+            margin: 0 auto;
+        }
+        .excellent_works_one>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+            position: absolute;
+        }
+/* 
+        .excellent_works_one{
+             margin-left: 55px;
+        }
+        
+        .excellent_works_two{
+            margin:0 auto;
+        }
+        .excellent_works_three{
+             margin-right: 55px;
+        } */
+       
+        
+    </style>
+</head>
+<body>
+  
+    <!-- 内容开始 -->
+    <div class="container-fluid a" >
+    <!-- 视频背景开始 -->
+        <div class="calligraphy_video_container">
+            <video class="fullscreenvideo"  id="bgvid" playsinline="" autoplay="" muted="ture" loop="">
+                <source src="videos/Writing - 107240.mp4" type="video/mp4">
+            </video>
+        </div>
+    <!-- 视频背景结束-->
+    
+        <div class="row align-items-center justify-content-center ">
+            <form class="calligraphy_search ">
+                <input class="calligraphy_input form-control" type="text" placeholder="请输入内容...">
+                <button> <i class="bi bi-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                        style="color: #393636;" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </i></button>
+            </form>
+
+            <div class="calligraphy_text">
+                <h1>优秀书法作品展示</h1>
+                <h4>Exhibition of excellent calligraphy works.</h4>
+            </div>
+        </div>  
+    </div>
+
+    <!-- 作品集 -->
+    <div class="container-fluid calligraphy_works_container">
+        <!-- 导航 -->
+        <div class="calligraphy_works_nav">
+            <ul class="nav nav-tabs">
+                <li class="nav-item ">
+                    <a class="nav-link active calligraphy_works_nav_text" data-toggle="tab"  href="#excellent_works" >优秀作品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link calligraphy_works_nav_text" data-toggle="tab"  href="#match_works" >比赛作品</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                <!-- 优秀作品详细内容 -->
+                <div class=" active tab-pane fade in"  id="excellent_works">
+                    优秀作品详细内容
+                    <div class="row">
+                      
+                        <div class="col-sm-4   ">
+                            <div class="excellent_works_one" >
+                                <img src="img/44GY1H.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-4   ">
+                            <div class="excellent_works_one" >
+                                <img src="img/8f0c37d.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-4   ">
+                            <div class="excellent_works_one" >
+                                <img src="img/8ROS.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- 比赛作品详细内容 -->
+                <div class="tab-pane fade" id="match_works">
+                    比赛作品详细内容
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="height: 700px;">
+
+    </div>
+</body>
+<script>
+    $(window).scroll(function () {
+        if ($(".navbar ").offset().top > 50) {
+            $(".fixed-top ").addClass("top-nav ");
+        } else {
+            $(".fixed-top ").removeClass("top-nav ");
+        }
+    })
+</script>
+</html>
