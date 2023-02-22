@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>三人行书法协会作品展示</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- 下拉菜单的，前面的用不了 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
     <style>
-        .calligraphy_video_container{
+       .a {
             width: 100%;
-            height: 90%;
-            position: fixed;
+            height: 80vh;
+            position: relative;
+            background-color: #393636;
+       }
+        .calligraphy_video_container{
+            width: 100%; 
+            height: 100%;
+            position: absolute;
             left: 0px;
             top: 0px;
             overflow: hidden;
-            z-index: -9999;
             /* background-color: brown; */
             
         }
@@ -31,17 +41,18 @@
             top: 0;
             object-fit: fill;
             overflow: hidden;
-            z-index: -9999;
+            /* z-index: -9999; */
         }
         
         .calligraphy_search{
-            width: 400px;
-            height: 50px;
+            max-width: 350px;
+            min-width: 280px;
+            height: 70px;
             border: none;
             position: absolute;
             
             /* /* left: 35%; */
-            bottom: 24%; 
+            top: 65%; 
             text-align: center;
             
             
@@ -75,87 +86,91 @@
             margin-top: 30px;
         }
 
-       
+        /* 导航 */
+        .calligraphy_works_nav{
+            text-decoration: none;
+            /* width: 260px; */
+            /* background: #db5050; */
+            /* background-color: #393636; */
+        }
         
+        .calligraphy_works_nav_text{
+            margin-top: 25px;
+            font-size: 15px;
+            color: #4e4c4c;
+            /* background:  #db5050; */
+            /* text-decoration: none; */
+        }
+        .calligraphy_works_nav_text:hover{
+            margin-top: 25px;
+            color: #db5050;
+            box-shadow: 0 1px 3px 0 #da4a4a;
+            /* text-decoration: none; */
+        }
+        .tab-content{
+            max-width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+            /* background-color: #393636; */
+        }
+        
+        .card-title{
+            bottom: 5%;
+            position: absolute;
+            color: white;
+            display: none;
+
+        } */
+        .img-fluid:hover  .card-title{
+            
+            
+            display: block;
+        }
+        /* .excellent_works_container{
+            position: relative;
+            margin-top: 50px;
+
+        } */
+        .excellent_works_card{
+           
+            margin: 0 auto;
+            position: relative;
+            
+        }
+        
+        .excellent_works_card>span{
+            position: absolute;
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,1)0%,rgba(0,0,0,0.5)66%, rgba(0,0,0,0)99%);/* Safari、Chrome */
+            height: 70px;
+            width: 100%; 
+            bottom: 0; 
+            left: 0;
+            border-radius: 15px;
+            display: none;
+            
+        }
+        .excellent_works_card>img{
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        .excellent_works_card:hover  .title{
+
+            display: block;
+        }
+        .excellent_works_card>span>h2{
+            left: 5%;
+            position: absolute;
+            color: white;
+           
+        }
     </style>
+        
+    
 </head>
 <body>
-    <div class="first">
-        <!-- 导航栏 -->
-        <nav class="navbar navbar-expand-lg fixed-top my-navbar navbar-light " role="navigation">
-            <!-- logo -->
-
-            <a class="navbar-brand" href="#" style="margin-left: 240px;">
-                <img class="logoimg" src="img/logo.png" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <!-- <span class="navbar-toggler-icon"></span> -->
-                <label for="burger" class="burger">
-                    <input id="burger" type="checkbox">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </button>
-
-            <!-- mene -->
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <!-- navbar-collapse 缩减之后的样式 -->
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">活动</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">新闻</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">作品展示</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">教学</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" id="" href="about.html">关于我们</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
-                    <li class="btnli">
-                        <a class="btn btn-light " data-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <i class="bi bi-search">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                    style="color: #BB1013;" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                </svg>
-                            </i>
-                        </a>
-                        <!-- <button class="btn btn-light my-2 my-sm-0" type="submit"></button> -->
-                    </li>
-                </ul>
-                <button class="nav-link login d-lg-inline-block mb-3 mb-md-0 ml-lg-3 mt-2" href="#">登录</button>
-                <button class="nav-link resd d-lg-inline-block mb-3 mb-md-0 ml-lg-3 mt-2" href="#">注册</button>
-
-            </div>
-        </nav>
-        <div class="search" style="display: none;">
-            <form action="">
-                <div class="input-group d-flex justify-content-center">
-                    <input type="text" class="input " placeholder="请输入您想要输入的内容" autocomplete="off">
-                    <input class="button--submit" value="搜索内容" type="submit">
-                </div>
-                <!-- col-lg-11 col-md-11 col-sm-10 -->
-            </form>
-        </div>
-        <!-- 导航栏结束 -->
-    </div>
+  
     <!-- 内容开始 -->
-    <div class="container-fluid">
+    <div class="container-fluid a" >
     <!-- 视频背景开始 -->
         <div class="calligraphy_video_container">
             <video class="fullscreenvideo"  id="bgvid" playsinline="" autoplay="" muted="ture" loop="">
@@ -165,7 +180,7 @@
     <!-- 视频背景结束-->
     
         <div class="row align-items-center justify-content-center ">
-            <form class="calligraphy_search">
+            <form class="calligraphy_search ">
                 <input class="calligraphy_input form-control" type="text" placeholder="请输入内容...">
                 <button> <i class="bi bi-search">
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
@@ -182,6 +197,146 @@
             </div>
         </div>  
     </div>
+
+    <!-- 作品集 -->
+    <div class="container-fluid calligraphy_works_container">
+        <!-- 导航 -->
+        <div class="calligraphy_works_nav">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="nav-item ">
+                    <a class="nav-link active calligraphy_works_nav_text" data-toggle="tab"  href="#excellent_works" >优秀作品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link calligraphy_works_nav_text" data-toggle="tab"  href="#match_works" >比赛作品</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content ">
+                <!-- 优秀作品详细内容 -->
+                <div class=" active tab-pane fade in"  id="excellent_works">
+                    优秀作品详细内容
+                    <div class="row justify-content-center excellent_works_container " style="margin-top: 20px; ">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center " style="margin-top: 20px; ">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center " style="margin-top: 20px; ">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center " style="margin-top: 20px; ">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                            <div class="excellent_works_card">
+                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
+                                <span class="title">
+                                    <h2 style="color: azure;">koli</h2> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 紧挨着大图的四个文本框 尾-->
+                </div>
+                <!-- 比赛作品详细内容 -->
+                <div class="tab-pane fade" id="match_works">
+                    比赛作品详细内容
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="height: 700px;">
+        
+        
+    </div>
 </body>
 <script>
     $(window).scroll(function () {
@@ -191,5 +346,9 @@
             $(".fixed-top ").removeClass("top-nav ");
         }
     })
+    // 选项卡内容自动显示
+    $(function () {
+      $('#myTab li:eq(1) a').tab('show');
+   });
 </script>
 </html>
