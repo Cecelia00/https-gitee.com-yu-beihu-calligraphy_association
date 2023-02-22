@@ -20,6 +20,24 @@
             box-sizing: border-box;
         }
 
+        /* body {
+            background: url(img/44GY1H.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        } */
+
+        @font-face {
+            font-family: 'YuWeisform';
+            /* 这个名字可以自己定义 */
+            src: url('fonts/YuWeisform.ttf');
+            /* IE9 Compat Modes */
+            /*这里以及下面的src后面的地址填的都是自己本地的相对地址*/
+            /* Legacy iOS */
+            /* font-weight: bold;
+            font-style: normal; */
+        }
+
         .fullscreenvideo {
             position: absolute;
             top: 50%;
@@ -67,11 +85,80 @@
 
 
         .frombox {
-
-            background: rgba(255, 255, 255, 0.28);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(5px);
             border-radius: 4px;
+        }
 
+        .form-signin {
+
+            width: 100%;
+            max-width: 38.25rem;
+            padding: 15px;
+            /* height: 100%; */
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        /* From uiverse.io by @alexruix */
+        .inpute {
+            width: 100%;
+            line-height: 28px;
+            border: 2px solid transparent;
+            border-bottom-color: #000000;
+            padding: .2rem 0;
+            outline: none;
+            background-color: transparent;
+            color: #0d0c22;
+            transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .inpute:focus,
+        .inpute:hover {
+            outline: none;
+            padding: .2rem 1rem;
+            border-radius: 1rem;
+            border-color: #000000;
+        }
+
+        .inpute::placeholder {
+            color: #000000;
+        }
+
+        .inpute:focus::placeholder {
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .inputer {
+            width: 100%;
+            max-width: 220px;
+            height: 30px;
+            line-height: 28px;
+            border: 2px solid transparent;
+            border-bottom-color: #000000;
+            padding: .2rem 0;
+            outline: none;
+            background-color: transparent;
+            color: #0d0c22;
+            transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .inpute:focus,
+        .inputer:hover {
+            outline: none;
+            /* padding: .2rem 1rem; */
+            border-radius: 1rem;
+            border-color: #000000;
+        }
+
+        .inputer::placeholder {
+            color: #000000;
+        }
+
+        .inputer:focus::placeholder {
+            opacity: 0;
+            transition: opacity .3s;
         }
     </style>
 
@@ -85,48 +172,47 @@
     <div class="videocontainer">
         <video class="fullscreenvideo" poster="__ROOT__/Themes/tdt/Asset/images/loginbg.jpg" id="bgvid" playsinline=""
             autoplay="" muted="ture" loop="">
-            <source src="9B6DDC4F3FD8BF72BDA0F594099CC40C.mp4" type="video/mp4">
+            <source src="videos/-5386.mp4" type="video/mp4">
         </video>
     </div>
     <div class="container-fluid">
-        <div class="">
-            <div class="col-lg-7 col-xl-7 col-md-7 col-sm-3">
+        <div class="row">
+            <div class=" frombox form-signin ">
+                <form action="" class="">
+                    <img src="img\logo.png" class="img-fluid" alt="">
+                    <h2 class="text-center"
+                        style="margin-top: -10px; font-family:YuWeisform ; font-size: 30px; color: #000000;">注册
+                    </h2>
+                    <label for="" class="" style="margin-top: 10px;">请输入手机号：</label>
 
-            </div>
-            <div class=" col-lg-4 col-xl-4 col-md-4 col-sm-6">
+                    <input placeholder="Username" type="text" class="inpute" required="">
+                    <label for="" class="" style="margin-top: 10px;">请输入密码：</label>
 
-                <div class="frombox mt-5">
-                    <form action="">
-                        <label class="text-content" style="margin-top: 20px; font-size: 24px; "></label><br>
-                        <h2 class="text-center" style="font-weight: bold; font-size: 24px; color: #ffffff;">登录</h2>
-                        <label for="inputEmail" class="" style="margin-top: 10px;">Email address</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required
-                            autofocus>
-                        <label for="inputPassword" class="sr-only">Password</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <div class="checkbox mb-3">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
+                    <input placeholder="Username" type="text" class="inpute" required="">
+                    <div class="form-group has-feedback feedback-left row mt-3 ml-1">
+                        <div class="">
+                            <input type="text" name="captcha" id="captcha" class="inputer" placeholder="验证码">
+                            <span class="mdi mdi-check-all form-control-feedback" aria-hidden="true"></span>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                        <p class="mt-5 mb-3 text-muted">&copy; 2017-2022</p>
-                    </form>
-                </div>
-
+                        <div class="mt-3 ml-3">
+                            <img src="" class="pull-right" style="cursor: pointer;"
+                                onclick="this.src=this.src+'?d='+Math.random();" title="点击刷新" alt="captcha">
+                        </div>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+                    <div class="mt-3">
+                        <p class="not-open">没有 open 账号？<a class="a-open-reghit" href="register.html"> 立即登录你的 open
+                                账号。</a></p>
+                    </div>
+                    <p class="mt-5 mb-3 text-muted">&copy; 2017-2022</p>
+                </form>
             </div>
-
-            <div class="col-lg-1 col-xl-1 col-md-1 col-sm-3">
-
-            </div>
-
-
-
         </div>
-
-
-
-
     </div>
 
 
