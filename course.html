@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="zn-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教程</title>
+    <link href="css/style.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-         body {
+        body {
             font-family: SF Pro SC, SF Pro Display, SF Pro Icons, AOS Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;
         }
 
@@ -193,25 +200,103 @@
         /* 
         导航栏登录注册css结束
          */
-        #wai { 
-            /* width:400px;  */
-            /* border:2px solid #900;  */
-            padding:10px; 
-            overflow:hidden
-            p
+
+        /* 教程开始 */
+        .widget {
+            background-color: #ffffff;
+            padding: 3rem 2rem;
+            border-radius: 5px;
         }
-        .divleft{
-             float:left; 
-             width:700px; 
-             border:1px solid #060
+
+        .page-wrapper {
+            background-color: #ffffff;
+            padding: 3rem;
+        }
+
+
+        @media (max-width: 768px) {
+            /* #cta h2 {
+                font-size: 34px;
+            } */
+            /* .page-wrapper {
+                padding: 3rem 1rem;
+            } */
+            /* .blog-title-area h3 {
+                font-size: 21px;
+                line-height: 1.4;
+            } */
+            /* #cta .lead {
+                font-size: 16px;
+            } */
+        }
+
+        /* @media (max-width: 1049px) {
+            .navbar-toggleable-md .navbar-nav .nav-link {
+                font-size: 13px;
+                padding: 1.5rem 0.3rem;
             }
-        .divright{
-             float:right; 
-             width:480px; 
-             border:1px solid #00F
+        } */
+        /* 
+        @media (max-width: 1120px) {
+            .market-header .navbar {
+                padding-left: 1rem;
+                padding-right: 1rem;
             }
+        }
+
+        @media (max-width: 991px) {
+            #cta .lead {
+                margin: 0 0rem 2rem 0;
+            }
+            #cta .newsletter-widget.text-center {
+                margin-top: 2rem;
+            }
+            .footer .widget {
+                margin: 2rem 0;
+            }
+            .navbar-toggleable-md .navbar-nav .nav-link {
+                padding: 1rem 0.6rem;
+            }
+        } */
+
+
+        #myTab li a {
+            text-decoration: none !important;
+            color: #792c2c;
+
+        }
+
+        #teach_menu {
+            min-width: 100px;
+            text-align: center;
+            box-shadow: 0 1px 3px 0 #9d1b1b;
+        }
+
+        #teach_menu>li:hover {
+            box-shadow: 0px 0px 3px #000000 inset;
+        }
+
+        /* .teach_vedio1{
+            margin-top: 20px;
+            background-color: #000;
+        } */
+        #pen {
+            margin-top: 10px;
+        }
+
+        .pen_img_container{
+            margin: 0 auto;
+        }
+        .fullscreenvideo {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: fill;
+            overflow: hidden;
+        }
     </style>
 </head>
+
 <body>
     <div class="first">
         <!-- 导航栏 -->
@@ -249,11 +334,11 @@
                         <a class="nav-link" href="calligraphy_works.html">作品展示</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">教学</a>
+                        <a class="nav-link" href="course.html">教学</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" id="" href="about.html">关于我们</a>
+                        <a class="nav-link" id="" href="about.html">加入我们</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
@@ -271,8 +356,10 @@
                         <!-- <button class="btn btn-light my-2 my-sm-0" type="submit"></button> -->
                     </li>
                 </ul>
-                <button class="nav-link login d-lg-inline-block mb-3 mb-md-0 ml-lg-3 mt-2" href="#">登录</button>
-                <button class="nav-link resd d-lg-inline-block mb-3 mb-md-0 ml-lg-3 mt-2" href="#">注册</button>
+                <button class="nav-link login d-lg-inline-block mb-3 mb-md-0 ml-lg-3 mt-2" href=""><a
+                        href="login.html">登录</a> </button>
+                <button class="nav-link resd d-lg-inline-block mb-3 mb-md-0 ml-lg-3 mt-2" href=""><a
+                        href="register.html">注册</a></button>
 
             </div>
         </nav>
@@ -287,9 +374,148 @@
         </div>
         <!-- 导航栏结束 -->
     </div>
-    <div id="wai">
-        <div class="divleft">此div完成左机关</div>
-        <div class="divright">此div实现右结构</div>
-    </div>
+
+    <div id="wrapper">
+        <section class="section lb">
+            <!-- <div class="tutorial_title">
+                <span>书法教程</span>
+            </div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-custom-build">
+                                <div class="blog-box ">
+                                    <div class="container">
+                                        <ul id="myTab" class="nav nav-tabs">
+                                            <li class="dropdown">
+                                                <a href="#" id="myTabDrop1" class="dropdown-toggle"
+                                                    data-toggle="dropdown">书法类型 <b class="caret"></b>
+                                                </a>
+                                                <ul id="teach_menu" class="dropdown-menu" role="menu"
+                                                    aria-labelledby="myTabDrop1">
+                                                    <li><a href="#pen" tabindex="-1" data-toggle="tab">
+                                                            钢笔教程</a>
+                                                    </li>
+                                                    <li><a href="#con2" tabindex="-1" data-toggle="tab">
+                                                            毛笔教程</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content"> <!-- 这个类是必须的，否则异常 -->
+                                            <div id="pen" class="tab-pane fade in active ">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="media pen_img_container" style="width: 250px;height: 250px;">
+                                                            <img src="img/pen_tearch.png"
+                                                                style="width: 100%;height: 100%;" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="media">
+                                                            <video class="media-object fullscreenvideo" id="bgvid"
+                                                                controls="controls" playsinline="" autoplay=""
+                                                                muted="ture" loop="">
+                                                                <source src="videos/Writing - 107240.mp4"
+                                                                    type="video/mp4">
+                                                            </video>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
+                                                        <div class="media border p-3">
+                                                            <video src="videos/-13053.mp4" class="mr-3 mt-3 " style="width: 150px;"></video>
+                                                            <div class="media-body">
+                                                              <h4>菜鸟教程</h4>
+                                                              <p>学的不仅是技术，更是梦想！！！</p>      
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="con2" class="tab-pane fade "><!-- fade 必须加 -->
+                                                毛笔
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sidebar">
+                            <div class="widget">
+                                <h2 class="widget-title">钢笔</h2>
+                                <div class="blog-list-widget">
+                                    <div class="list-group">
+                                        <a href="marketing-single.html"
+                                            class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="upload/small_07.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
+                                                <small>12 Jan, 2016</small>
+                                            </div>
+                                        </a>
+
+                                        <a href="marketing-single.html"
+                                            class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="upload/small_08.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">Let's make an introduction for creative life</h5>
+                                                <small>11 Jan, 2016</small>
+                                            </div>
+                                        </a>
+
+                                        <a href="marketing-single.html"
+                                            class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 last-item justify-content-between">
+                                                <img src="upload/small_09.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
+                                                <small>07 Jan, 2016</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- end blog-list -->
+                            </div><!-- end widget -->
+
+
+
+
+
+                            <div class="widget">
+                                <h2 class="widget-title">毛笔</h2>
+                                <div class="link-widget">
+                                    <ul>
+                                        <li><a href="#">Marketing <span>(21)</span></a></li>
+                                        <li><a href="#">SEO Service <span>(15)</span></a></li>
+                                        <li><a href="#">Digital Agency <span>(31)</span></a></li>
+                                        <li><a href="#">Make Money <span>(22)</span></a></li>
+                                        <li><a href="#">Blogging <span>(66)</span></a></li>
+                                        <li><a href="#">Entertaintment <span>(11)</span></a></li>
+                                        <li><a href="#">Video Tuts <span>(87)</span></a></li>
+                                    </ul>
+                                </div><!-- end link-widget -->
+                            </div><!-- end widget -->
+                        </div><!-- end sidebar -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+    </div><!-- end wrapper -->
 </body>
+<script>
+    $(function () {
+        $('#myTab li:eq(1) a').tab('show');
+    });
+</script>
+
 </html>
