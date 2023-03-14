@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card mb-3">
+          <img id="myImage" src="img/1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button id="myButton" class="btn btn-primary">Change Image</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    var groupIndex = 1;
+    var numGroups = 3;
+    var images = {
+      1: ['1.png', '2.png', '3.png'],
+      2: ['1.png', 'image5.jpg', 'image6.jpg'],
+      3: ['image7.jpg', 'image8.jpg', 'image9.jpg']
+    };
+    var myImage = document.getElementById('myImage');
+    var myButton = document.getElementById('myButton');
+    myButton.onclick = function() {
+      groupIndex++;
+      if (groupIndex > numGroups) {
+        groupIndex = 1;
+      }
+      myImage.src = images[groupIndex][0];
+    }
+  </script>
