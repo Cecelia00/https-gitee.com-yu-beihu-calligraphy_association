@@ -54,7 +54,7 @@
 
         .navbar-header {
             padding-left: 200px;
-            height: 65px;
+            height: 45px;
         }
 
         .nav-item {
@@ -679,41 +679,37 @@
             background-color: rgb(225, 65, 65);
         }
 
-        /*尾部开始*/
-        .footer {
-            width: 100%;
-            height: 350px;
-            background: #fda9a9;
-            margin-top: 20px;
-        }
+ /*尾部开始*/
+ .footer{
+    width: 100%;
+    height: 350px;
+    background: #fda9a9;
+    margin-top: 20px;
+ } 
 
-        .footer-in {
-            width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            padding: 100px 50px;
-            justify-content: space-around;
-        }
+ .footer-in{
+    width: 1200px;
+    margin: 0 auto;   
+    display: flex;
+    padding: 100px 50px;
+    justify-content: space-around;
+ }
+.footer-item{
+    width: 100px;
+   border-right: 1px solid  rgb(221, 81, 81);
+}
+.footer-item:last-child{
+    border-right: none;
+}
+footer-item:last-child(2){
+    border-right: none;
+}
 
-        .footer-item {
-            width: 100px;
-            border-right: 1px solid rgb(221, 81, 81);
-        }
-
-        .footer-item:last-child {
-            border-right: none;
-        }
-
-        footer-item:last-child(2) {
-            border-right: none;
-        }
-
-        .footer-item h3 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
+.footer-item h3{
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
         /*作品展示结束*/
 
         /* 活动中心开始 */
@@ -732,12 +728,12 @@
 </head>
 
 <body>
-
+   
 
 
     <div class="first">
         <!-- 导航栏 -->
-        <nav class="navbar navbar-expand-lg fixed-top my-navbar  navbar-light " role="navigation">
+        <nav class="navbar navbar-expand-lg fixed-top my-navbar navbar-light " role="navigation">
             <!-- logo -->
 
             <a class="navbar-brand" href="#" style="margin-left: 240px;">
@@ -856,7 +852,31 @@
             <span class="sr-only">Next</span>
         </button>
     </div>
+    <!--轮播图结束-->
 
+    <!-- 活动要闻开始 -->
+    <!-- <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    style="color: #BB1013;" class=" bi bi-newspaper" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
+                    <path
+                        d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+                </svg>
+                <span class="align-middle"
+                    style="font-size: 24px;font-weight:bolder;font-family: YuWeisform; ">活动要闻</span>
+
+            </div>
+            <div class="col">
+                <div class="float-right mr-3">
+                    <button class="moreActivity "> 进入活动中心
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <!-- 活动内容开始 -->
     <div class="container-fluid mt-5">
@@ -1316,59 +1336,31 @@
     </div>
 
     <!-- 社团介绍结束 -->
+    <div style="height: 900px;"></div>
 
-
-    <!--底部栏-->
-    <footer class="container-fluid py-3" style="background-color: #F5F5F7;-webkit-box-shadow: 0px 2px 23px -13px rgba(0,0,0,.3);
-    box-shadow: 0px 2px 23px -13px rgba(0,0,0,.3);
-    ">
-        <div class="row " style="">
-            <div class="col-6 col-md ">
-                <div style="display: flex; justify-content: center;">
-                    <img src="img/logo3.jpg" class="" alt="" width="130" height="130">
-                </div>
-
-                <!-- <p  style=""></p> -->
-                <p class="text-center mt-3" style="font-family: 'STXingkai'; font-size: 20px; ">三人行书法协会
-                </p>
-                <!-- <p style="font-family: 'STLiti'; font-size: 18px;">三人行书法协会欢迎您</p> -->
-                <!-- <p style="font-family: 'STXingkai'; font-size: 36px; text-shadow: 1px 1px #888;">这是中国书法风格的文本。</p> -->
-                <small class="d-block text-muted text-center">&copy; 2017-2022</small>
-            </div>
-
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Resource</a></li>
-                    <li><a class="text-muted" href="#">Resource name</a></li>
-                    <li><a class="text-muted" href="#">Another resource</a></li>
-                    <li><a class="text-muted" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Business</a></li>
-                    <li><a class="text-muted" href="#">Education</a></li>
-                    <li><a class="text-muted" href="#">Government</a></li>
-                    <li><a class="text-muted" href="#">Gaming</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>加入我们</h5>
-                <div class="row mt-2">
-                    <img src="img/xuanchuan.png" alt="" class="col-6 " width="80" height="130">
-                    <img src="img/xuanchuan2.png" alt="" class="col-6" width="80" height="130">
-                </div>
-                <div class="row mt-2">
-                    <div class="col">添加微信联系</div>
-                    <div class="col">添加QQ联系</div>
-                </div>
-            </div>
+     <!--底部栏-->
+     <div class="footer">
+        <div class="footer-in">
+          <div class="footer-item">
+        <h3>社交媒体</h3>
+        <p>新浪微博</p>
+        <p>微信公众号</p>
+           </div>
+           <div class="footer-item">
+            <h3>书法帮助</h3>
+            <p>桂林电子科技大学北海校区</p>
+           
+               </div>
+               <div class="footer-item">
+                <h3>出版权</h3>
+                <p>桂电书法社</p>
+                <p>校训：正德厚学，笃行致新</p>
+                   </div>
+    <div class="footer-item">
+        <img src="https://bkimg.cdn.bcebos.com/pic/b64543a98226cffca01cb258b3014a90f603ea22?x-bce-process=image/resize,m_lfit,w_536,limit_1" alt="" height="125px" width="150px">
+    </div>
         </div>
-    </footer>
-
-
+    </div>
 
 </body>
 <!--Swiper JS-->
