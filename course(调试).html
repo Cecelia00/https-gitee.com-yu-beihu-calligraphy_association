@@ -1,31 +1,47 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card mb-3">
-          <img id="myImage" src="img/1.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button id="myButton" class="btn btn-primary">Change Image</button>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击按钮循环切换视频</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="videos/video1.mp4" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="videos/video2.mp4" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-        
-      </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-primary" onclick="changeVideo()">下一组视频</button>
+        </div>
     </div>
-  </div>
-  <script>
-    var groupIndex = 1;
-    var numGroups = 3;
-    var images = {
-      1: ['1.png', '2.png', '3.png'],
-      2: ['1.png', 'image5.jpg', 'image6.jpg'],
-      3: ['image7.jpg', 'image8.jpg', 'image9.jpg']
-    };
-    var myImage = document.getElementById('myImage');
-    var myButton = document.getElementById('myButton');
-    myButton.onclick = function() {
-      groupIndex++;
-      if (groupIndex > numGroups) {
-        groupIndex = 1;
-      }
-      myImage.src = images[groupIndex][0];
-    }
-  </script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        var videoIds = [
+            'video1',
+            'video2',
+            'video3',
+            'video4'
+        ];
+        var currentVideo = 0;
+        function changeVideo() {
+            currentVideo++;
+            if (currentVideo == videoIds.length) {
+                currentVideo = 0;
+            }
+            $('iframe').eq(0).attr('src', 'videos/' + videoIds[currentVideo * 2]+'.mp4');
+            $('iframe').eq(1).attr('src', 'videos/' + videoIds[currentVideo * 2 + 1]+'.mp4');         
+        }
+    </script>
+</body>
+</html>

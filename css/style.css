@@ -86,3 +86,6 @@ ul {
     display: block;
     margin-bottom: 3rem;
 }
+.link-widget >ul>li>a:hover,.blog-list-widget>div>a>div:hover{
+    color: #BB1013;
+}
