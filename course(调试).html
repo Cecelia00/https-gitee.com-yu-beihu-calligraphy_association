@@ -6,42 +6,47 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="videos/video1.mp4" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="videos/video1.mp4"></iframe>
                 </div>
+              </div>
             </div>
-            <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="videos/video2.mp4" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="videos//video3.mp4"></iframe>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="text-center mt-3">
-            <button class="btn btn-primary" onclick="changeVideo()">下一组视频</button>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script>
-        var videoIds = [
-            'video1',
-            'video2',
-            'video3',
-            'video4'
-        ];
-        var currentVideo = 0;
-        function changeVideo() {
-            currentVideo++;
-            if (currentVideo == videoIds.length) {
-                currentVideo = 0;
-            }
-            $('iframe').eq(0).attr('src', 'videos/' + videoIds[currentVideo * 2]+'.mp4');
-            $('iframe').eq(1).attr('src', 'videos/' + videoIds[currentVideo * 2 + 1]+'.mp4');         
-        }
-    </script>
+      </div>
 </body>
 </html>
