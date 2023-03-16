@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教程</title>
     <link href="css/style.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -213,59 +212,15 @@
             padding: 3rem;
         }
 
-
-        @media (max-width: 768px) {
-            /* #cta h2 {
-                font-size: 34px;
-            } */
-            /* .page-wrapper {
-                padding: 3rem 1rem;
-            } */
-            /* .blog-title-area h3 {
-                font-size: 21px;
-                line-height: 1.4;
-            } */
-            /* #cta .lead {
-                font-size: 16px;
-            } */
-        }
-
-        /* @media (max-width: 1049px) {
-            .navbar-toggleable-md .navbar-nav .nav-link {
-                font-size: 13px;
-                padding: 1.5rem 0.3rem;
-            }
-        } */
-        /* 
-        @media (max-width: 1120px) {
-            .market-header .navbar {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-
-        @media (max-width: 991px) {
-            #cta .lead {
-                margin: 0 0rem 2rem 0;
-            }
-            #cta .newsletter-widget.text-center {
-                margin-top: 2rem;
-            }
-            .footer .widget {
-                margin: 2rem 0;
-            }
-            .navbar-toggleable-md .navbar-nav .nav-link {
-                padding: 1rem 0.6rem;
-            }
-        } */
-
-
         #myTab li a {
             text-decoration: none !important;
             color: #792c2c;
-
         }
 
+        .nav-tabs  {
+            border-color: #BB1013;
+            border-bottom-width: 3px;
+        }
         #teach_menu {
             min-width: 100px;
             text-align: center;
@@ -276,24 +231,115 @@
             box-shadow: 0px 0px 3px #000000 inset;
         }
 
-        /* .teach_vedio1{
-            margin-top: 20px;
-            background-color: #000;
-        } */
-        #pen {
+        #pen,#brush{
             margin-top: 10px;
         }
 
-        .pen_img_container{
+        .thumbnail-image {
+            cursor: pointer;
+            display: block;
+            width: 100px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .thumbnail-images {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+        }
+
+        .carousel-item:hover {
+            cursor: pointer;
+        }
+
+        .carousel-control {
+            display: none;
+        }
+        /* 换一换按钮开始 */
+        .change2{
+             color: #615e5e; 
+             font-size: 13px;
+             right: 4%;
+             bottom: 3px; 
+             position: absolute;
+
+        }
+        /* 换一换结束*/
+        .pen_video_container,.brush_video_container{
+            margin: 4px;
+        }
+
+
+        .pen_img_container,.brush_img_container{
             margin: 0 auto;
         }
+
+        .pen_box,.brush_box{
+            text-align: center;
+            line-height: 0.5;
+            /* border: 1px solid ; */
+            border-radius: 8px;
+            padding-bottom: 0.1px;
+            margin: 4px;
+            /* background-color: #908d8d; */
+
+        }
+
+        .pen_box:hover,.brush_box:hover{
+            /* background-color: #908d8d; */
+            cursor: pointer;
+
+        }
+
+        .pen_box>h6,.brush_box>h6{
+            letter-spacing: 3px;
+        }
+
+        .pen_box>p,.brush_box>p{
+            color: rgb(188, 184, 184);
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        /* #pen_text {
+            display: none;
+        }
+
+        .pen_box:hover #pen_text {
+            display: block;
+        } */
+
+
+        .pen_video_container,.brush_video_container{
+            min-width: 100%;
+            /* min-height: 300px; */
+            /* padding: 10px; */
+
+        }
+
+        .fullscreenvideo1 {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            object-fit: fill;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
         .fullscreenvideo {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position: relative;
             object-fit: fill;
             overflow: hidden;
+            margin: 0 auto;
+            border-radius: 8px;
         }
+        
+        
+       
     </style>
 </head>
 
@@ -397,7 +443,7 @@
                                                     <li><a href="#pen" tabindex="-1" data-toggle="tab">
                                                             钢笔教程</a>
                                                     </li>
-                                                    <li><a href="#con2" tabindex="-1" data-toggle="tab">
+                                                    <li><a href="#brush" tabindex="-1" data-toggle="tab">
                                                             毛笔教程</a>
                                                     </li>
                                                 </ul>
@@ -407,45 +453,299 @@
                                         <div class="tab-content"> <!-- 这个类是必须的，否则异常 -->
                                             <div id="pen" class="tab-pane fade in active ">
                                                 <div class="row">
+                                                    <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
+                                                        <div id="video-carousel1" class="carousel slide"
+                                                            data-bs-ride="carousel" data-bs-interval="5000">
+
+                                                            <!-- 钢笔轮播图内容开始 -->
+                                                            <div class="carousel-inner">
+                                                                <div class="carousel-item active">
+                                                                    <video class="d-block w-100 video1"
+                                                                        src="videos/video1.mp4" autoplay muted></video>
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h5>Video 1</h5>
+                                                                        <p>Description of Video 1</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <video class="d-block w-100 video1"
+                                                                        src="videos/video2.mp4" autoplay muted></video>
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h5>Video 2</h5>
+                                                                        <p>Description of Video 2</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <video class="d-block w-100 video1"
+                                                                        src="videos/video3.mp4" autoplay
+                                                                        muted></video>
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h5>Video 3</h5>
+                                                                        <p>Description of Video 3</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--钢笔轮播图内容结束-->
+                                                            <!-- 可视化的图片导航 -->
+                                                            <div class="thumbnail-images">
+                                                                <img src="video-thumbnail-1.jpg"
+                                                                    class="img-fluid thumbnail-image"
+                                                                    data-bs-target="#video-carousel1"
+                                                                    data-bs-slide-to="0">
+                                                                <img src="video-thumbnail-2.jpg"
+                                                                    class="img-fluid thumbnail-image"
+                                                                    data-bs-target="#video-carousel1"
+                                                                    data-bs-slide-to="1">
+                                                                <img src="video-thumbnail-3.jpg"
+                                                                    class="img-fluid thumbnail-image"
+                                                                    data-bs-target="#video-carousel1"
+                                                                    data-bs-slide-to="2">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!-- 钢笔内容推荐标题开始 -->
+                                                <div class="row">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                        <div class="media pen_img_container" style="width: 250px;height: 250px;">
-                                                            <img src="img/pen_tearch.png"
-                                                                style="width: 100%;height: 100%;" alt="">
+                                                        <div style="background-color: rgb(247, 247, 247);">
+                                                            <span style="font-size: 30px;">为你推荐</span>
+                                                            <span class="change2" >
+                                                                <button style="border:none; background:transparent;" onclick="changeVideo(1)">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                                              </svg>
+                                                              换一换</button>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <!-- 钢笔内容推荐标题结束 -->
+                                                <!-- 钢笔正式内容开始 -->
+                                                <!-- 内容一开始 -->
+                                                <div class="row " style="margin-top: 10px; ">
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="pen_box ">
+                                                            <div class="media pen_video_container">
+                                                                <video class="fullscreenvideo video2" id="pen_video"
+                                                                     onmouseover="videoPlayback()"
+                                                                    onmouseout="videoStopped()">
+                                                                    <source src="videos/video2.mp4"
+                                                                        type="video/mp4">
+                                                                </video>
+                                                            </div>
+                                                            <h6>教程1</h6>
+                                                            <p>钢笔是中华民族的优秀传承..</p>
+                                                            <!-- <p id="pen_text">nobody yes louloulou</p> -->
+                                                        </div>   
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="pen_box ">
+                                                            <div class="media pen_video_container">
+                                                                <video class="fullscreenvideo video2" id="pen_video"
+                                                                     onmouseover="videoPlayback()"
+                                                                    onmouseout="videoStopped()">
+                                                                    <source src="videos/video1.mp4"
+                                                                        type="video/mp4">
+                                                                </video>
+                                                            </div>
+                                                            <h6>教程1</h6>
+                                                            <p>钢笔是中华民族的优秀传承..</p>
+                                                            <!-- <p id="pen_text">nobody yes louloulou</p> -->
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
-                                                        <div class="media">
-                                                            <video class="media-object fullscreenvideo" id="bgvid"
-                                                                controls="controls" playsinline="" autoplay=""
-                                                                muted="ture" loop="">
-                                                                <source src="videos/Writing - 107240.mp4"
-                                                                    type="video/mp4">
-                                                            </video>
+                                                </div><!-- 内容一结束 -->
+                                                <hr>
+                                                <!-- 内容二开始 -->
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="card mb-1">
+                                                            <div class="card-body" style="text-align: center;">
+                                                              <div class="embed-responsive embed-responsive-16by9">
+                                                                <video class="fullscreenvideo video21" id="pen_video"
+                                                                     onmouseover="videoPlayback()"
+                                                                    onmouseout="videoStopped()">
+                                                                    <source src="videos/video1.mp4"
+                                                                        type="video/mp4">
+                                                                </video>
+                                                                <!-- <iframe class="embed-responsive-item video21" src="videos/video1.mp4"></iframe> -->
+                                                              </div>
+                                                              <span >教程3</span>
+                                                            </div>
                                                         </div>
-                                                    </div> -->
-                                                </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="card mb-1">
+                                                            <div class="card-body" style="text-align: center;">
+                                                              <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item video21" src="videos/video1.mp4"></iframe>
+                                                              </div>
+                                                              <span>教程3</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- 内容二结束 -->
+                                                <!-- 内容三开始 -->
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="card mb-1">
+                                                            <div class="card-body" style="text-align: center;">
+                                                              <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item video21" src="videos/video1.mp4"></iframe>
+                                                              </div>
+                                                              <span >教程3</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="card mb-1">
+                                                            <div class="card-body" style="text-align: center;">
+                                                              <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item video21" src="videos/video1.mp4"></iframe>
+                                                              </div>
+                                                              <span>教程3</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- 内容三结束 -->
+                                                <!-- 内容四开始 -->
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="card mb-1">
+                                                            <div class="card-body" style="text-align: center;">
+                                                              <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item video21" src="videos/video1.mp4"></iframe>
+                                                              </div>
+                                                              <span >教程3</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="card mb-1">
+                                                            <div class="card-body" style="text-align: center;">
+                                                              <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item video21" src="videos/video1.mp4"></iframe>
+                                                              </div>
+                                                              <span>教程3</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- 内容四结束 -->
+                                                <!-- 钢笔正式内容推荐结束 -->
+                                            </div>
+                                            <!-- 钢笔内容结束 -->
+                                            <!-- 毛笔内容开始 -->
+                                            <div id="brush" class="tab-pane fade in ">
                                                 <div class="row">
                                                     <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
-                                                        <div class="media border p-3">
-                                                            <video src="videos/-13053.mp4" class="mr-3 mt-3 " style="width: 150px;"></video>
-                                                            <div class="media-body">
-                                                              <h4>菜鸟教程</h4>
-                                                              <p>学的不仅是技术，更是梦想！！！</p>      
+                                                        <div id="video-carousel2" class="carousel slide"
+                                                            data-bs-ride="carousel" data-bs-interval="5000">
+
+                                                            <!-- 轮播图内容 -->
+                                                            <div class="carousel-inner">
+                                                                <div class="carousel-item active">
+                                                                    <video class="d-block w-100 video3"
+                                                                        src="videos/video1.mp4" autoplay muted></video>
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h5>Video 1</h5>
+                                                                        <p>Description of Video 1</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <video class="d-block w-100 video3"
+                                                                        src="videos/video2.mp4" autoplay muted></video>
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h5>Video 2</h5>
+                                                                        <p>Description of Video 2</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <video class="d-block w-100 video3"
+                                                                        src="videos/video3.mp4" autoplay
+                                                                        muted></video>
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h5>Video 3</h5>
+                                                                        <p>Description of Video 3</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 可视化的图片导航 -->
+                                                            <div class="thumbnail-images">
+                                                                <img src="video-thumbnail-1.jpg"
+                                                                    class="img-fluid thumbnail-image"
+                                                                    data-bs-target="#video-carousel2"
+                                                                    data-bs-slide-to="0">
+                                                                <img src="video-thumbnail-2.jpg"
+                                                                    class="img-fluid thumbnail-image"
+                                                                    data-bs-target="#video-carousel2"
+                                                                    data-bs-slide-to="1">
+                                                                <img src="video-thumbnail-3.jpg"
+                                                                    class="img-fluid thumbnail-image"
+                                                                    data-bs-target="#video-carousel2"
+                                                                    data-bs-slide-to="2">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div id="con2" class="tab-pane fade "><!-- fade 必须加 -->
-                                                毛笔
-                                            </div>
+                                                <hr>
+                                                <!-- 毛笔内容推荐标题开始 -->
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div style="background-color: rgb(247, 247, 247);">
+                                                            <span style="font-size: 30px;">为你推荐</span>
+                                                            <span class="change2" >
+                                                                <button style="border:none; background:transparent;" onclick="changeVideo(2)">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                                              </svg>
+                                                              换一换</button>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <!-- 内容推荐标题结束 -->
+                                                <!-- 毛笔正式内容开始 -->
+                                                <div class="row " style="margin-top: 10px;">
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="brush_box ">
+                                                            <div class="media brush_video_container">
+                                                                
+                                                                <video class="fullscreenvideo video4" id="brush_video"
+                                                                     onmouseover="videoPlayback()"
+                                                                    onmouseout="videoStopped()">
+                                                                    <source src="videos/video5.mp4"
+                                                                        type="video/mp4">
+                                                                </video>
+                                                            </div>
+                                                            <h6>教程1</h6>
+                                                            <p>毛笔是中华民族的优秀传承..</p>
+                                                            <!-- <p id="pen_text">nobody yes louloulou</p> -->
+                                                        </div>   
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                                                        <div class="brush_box ">
+                                                            <div class="media brush_video_container">
+                                                                <video class="fullscreenvideo video4" id="brush_video"
+                                                                     onmouseover="videoPlayback()"
+                                                                    onmouseout="videoStopped()">
+                                                                    <source src="videos/video6.mp4"
+                                                                        type="video/mp4">
+                                                                </video>
+                                                            </div>
+                                                            <h6>教程1</h6>
+                                                            <p>毛笔是中华民族的优秀传承..</p>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- 毛笔正式内容推荐结束 -->
+                                            </div><!--毛笔内容结束-->
                                         </div>
                                     </div>
-
-
-
                                 </div>
-
                             </div>
                         </div>
                     </div><!-- end col -->
@@ -453,33 +753,33 @@
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="sidebar">
                             <div class="widget">
-                                <h2 class="widget-title">钢笔</h2>
+                                <h2  class="widget-title">学书心得<hr style="border: 1px solid #BB1013;"> </h2>
                                 <div class="blog-list-widget">
                                     <div class="list-group">
                                         <a href="marketing-single.html"
                                             class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
-                                                <img src="upload/small_07.jpg" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
-                                                <small>12 Jan, 2016</small>
+                                                <img src="img/xinde1.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1 " >谈谈怎么学习硬笔书法</h5>
+                                                <small>毛文斌</small>
                                             </div>
                                         </a>
 
                                         <a href="marketing-single.html"
                                             class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
-                                                <img src="upload/small_08.jpg" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">Let's make an introduction for creative life</h5>
-                                                <small>11 Jan, 2016</small>
+                                                <img src="img/xinde2.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1 ">学书杂感 </h5>
+                                                <small>荆霄鹏</small>
                                             </div>
                                         </a>
 
                                         <a href="marketing-single.html"
                                             class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 last-item justify-content-between">
-                                                <img src="upload/small_09.jpg" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
-                                                <small>07 Jan, 2016</small>
+                                                <img src="img/xinde3.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1 ">谈谈书法艺术的“融会” </h5>
+                                                <small>刘旭光</small>
                                             </div>
                                         </a>
                                     </div>
@@ -491,16 +791,16 @@
 
 
                             <div class="widget">
-                                <h2 class="widget-title">毛笔</h2>
+                                <h2 class="widget-title">书法教程<hr style="border: 1px solid #BB1013;"></h2>
                                 <div class="link-widget">
                                     <ul>
-                                        <li><a href="#">Marketing <span>(21)</span></a></li>
-                                        <li><a href="#">SEO Service <span>(15)</span></a></li>
-                                        <li><a href="#">Digital Agency <span>(31)</span></a></li>
-                                        <li><a href="#">Make Money <span>(22)</span></a></li>
-                                        <li><a href="#">Blogging <span>(66)</span></a></li>
-                                        <li><a href="#">Entertaintment <span>(11)</span></a></li>
-                                        <li><a href="#">Video Tuts <span>(87)</span></a></li>
+                                        <li><a href="#">钢笔书法基本知识（司马彦） </a><span class="badge badge-secondary">钢笔</span></li>
+                                        <li><a href="#">怎样写好字（卢中南）</a><span class="badge badge-secondary">钢笔</span> </li>
+                                        <li><a href="#">怎样写好钢笔字 </a><span class="badge badge-secondary">钢笔</span> </li>
+                                        <li><a href="#">钢笔字的特点 </a><span class="badge badge-secondary">钢笔</span></li>
+                                        <li><a href="#">你确定你会临帖吗？</a><span class="badge badge-secondary">毛笔</span></li>
+                                        <li><a href="#">繁体、异体、古今字用法表 </a><span class="badge badge-secondary">毛笔</span></li>
+                                        <li><a href="#">学写毛笔字手抖怎么办 </a><span class="badge badge-secondary">毛笔</span></li>
                                     </ul>
                                 </div><!-- end link-widget -->
                             </div><!-- end widget -->
@@ -511,11 +811,100 @@
         </section>
 
     </div><!-- end wrapper -->
+
 </body>
+<!-- 引入 Bootstrap JavaScript 文件 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    // 获取轮播图和缩略图
+    var carousel = document.getElementById('video-carousel');
+    var thumbnailImages = document.querySelectorAll('.thumbnail-image');
+    
+    // 添加鼠标悬停事件监听器
+    thumbnailImages.forEach(function (thumbnailImage) {
+        thumbnailImage.addEventListener('mouseover', function () {
+            // 获取要播放的视频和轮播图指示器
+            var target = this.getAttribute('data-bs-target');
+            var slideTo = this.getAttribute('data-bs-slide-to');
+            // 切换到指定的视频
+            carousel.querySelector('.active video1').pause();
+            carousel.querySelector('.active').classList.remove('active');
+            carousel.querySelector(target).classList.add('active');
+            carousel.querySelector(target + ' video1').play();
+
+            // 切换轮播图指示器
+            carousel.querySelector('.carousel-indicators .active').classList.remove('active');
+            carousel.querySelector('.carousel-indicators li:nth-child(' + (parseInt(slideTo) + 1) + ')').classList.add('active');
+       
+        });
+    });
+</script>
+
+<!-- 轮播结束 -->
 <script>
     $(function () {
         $('#myTab li:eq(1) a').tab('show');
     });
-</script>
 
+</script>
+<!-- 展示开始 -->
+<script type="text/javascript">
+    var videos = document.querySelectorAll('.video1,.video2,.video3,.video4');
+    videos.forEach(function (video) {
+        video.addEventListener('mouseover', function () {
+            videos.forEach(function (otherVideo) {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+            video.play();
+        });
+        video.addEventListener('mouseout', function () {
+            video.pause();
+        });
+        // 点击视频进入全屏
+        video.addEventListener('click', function () {
+            if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.requestFullscreen) {
+                video.requestFullscreen();
+            }
+        });
+
+        video.addEventListener('webkitfullscreenchange', function () {
+            if (document.webkitFullscreenElement) {
+                // 进入全屏时显示控件
+                video.controls = true;
+            } else {
+                // 退出全屏时隐藏控件
+                video.controls = false;
+            }
+
+        })
+    });
+    //换一换按钮
+    var videoIds = [
+           [ 'video1','video2','video3','video4'],
+           [ 'video5','video6','video7','video8']
+        ];
+        var currentVideo1 = 0;
+        var currentVideo2 = 0;
+        function changeVideo(videoId) {
+            var currentVideo = videoId == 1 ? currentVideo1++ : currentVideo2++;
+
+            if (currentVideo == videoIds[videoId-1].length/2) {
+                currentVideo1 = 0;
+            }
+            // 钢笔
+            $('.video2').eq(0).attr('src', 'videos/' + videoIds[videoId-1][currentVideo1 * 2]+'.mp4');
+            $('.video2').eq(1).attr('src', 'videos/' + videoIds[videoId-1][currentVideo1 * 2 + 1]+'.mp4');
+             //毛笔
+            $('.video4').eq(0).attr('src', 'videos/' + videoIds[videoId-1][currentVideo1 * 2]+'.mp4');
+            $('.video4').eq(1).attr('src', 'videos/' + videoIds[videoId-1][currentVideo1 * 2 + 1]+'.mp4');
+                
+        }
+</script>
 </html>
