@@ -13,41 +13,14 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.js"></script>
     <style>
-        .fullscreenvideo {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-            -webkit-transition: 1s opacity;
-            transition: 1s opacity;
+        body {
+            background: url(img/backimg3.png) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
-        .videocontainer {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: -0.4px;
-            top: 0px;
-            overflow: hidden;
-            z-index: -100;
-        }
 
-        .videocontainer:before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: block;
-            z-index: -1;
-            top: 0;
-            left: 0;
-        }
 
 
         @font-face {
@@ -292,33 +265,13 @@
             margin-top: 10px;
         }
     </style>
-    <script type="text/javascript">
-        function onMouseOver() {
-            dianhua.style.cursor = 'pointer';
-            youxiang.style.cursor = 'pointer';
-        }
 
-        function changePage(val) {
-            var phonenumber_div = document.getElementById("phonenumber");
-            var email_div = document.getElementById("email");
-            if (val == 'phonenumber') {
-                phonenumber_div.style.display = 'block';
-                email_div.style.display = 'none';
-            } else if (val == 'email') {
-                phonenumber_div.style.display = 'none';
-                email_div.style.display = 'block';
-            }
-        }
     </script>
 </head>
 
 <body>
-    <div class="videocontainer">
-        <video class="fullscreenvideo" poster="__ROOT__/Themes/tdt/Asset/images/loginbg.jpg" id="bgvid" playsinline=""
-            autoplay="" muted="ture" loop="">
-            <source src="videos/-13053.mp4" type="video/mp4">
-        </video>
-    </div>
+
+
     <div class="container-fluid">
         <div class="row therow">
             <div class="form " id="phonenumber_div">
