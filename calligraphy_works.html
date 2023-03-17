@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,7 @@
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-    
+
     <style>
         /* 导航栏 */
         body {
@@ -201,157 +202,130 @@
         .resd:hover::before {
             width: 100%;
         }
-/* 导航栏结束 */
-       .a {
+
+        /* 导航栏结束 */
+        /* 图片背景开始 */
+        .calligraphy_img_container>img {
             width: 100%;
-            height: 80vh;
-            position: relative;
-            background-color: #393636;
-       }
-        .calligraphy_video_container{
-            width: 100%; 
-            height: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            overflow: hidden;
-            /* background-color: brown; */
-            
-        }
-        .fullscreenvideo{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            object-fit: fill;
-            overflow: hidden;
-            /* z-index: -9999; */
-        }
-        
-        .calligraphy_search{
-            max-width: 350px;
-            min-width: 280px;
-            height: 70px;
-            border: none;
-            position: absolute;
-            
-            /* /* left: 35%; */
-            top: 65%; 
-            text-align: center;
-            
-            
-        }
-        .calligraphy_search>button {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 34px;
-            height: 34px;
-            border: none;
-            text-align: center;
-            z-index: 1;
-            background: transparent;
-        }
-        .calligraphy_search>input{
-            text-indent: 20px;
-        }
-        
-        .calligraphy_input{
-            border-radius: 20px;
-        }
-        .calligraphy_text{
-            top:40%;
-            position: absolute;
-            color: aliceblue;
-            text-align: center;
-        }
-        .calligraphy_text>h4{
-            
-            margin-top: 30px;
         }
 
-        /* 导航 */
-        .calligraphy_works_nav{
+        /* 图片背景结束 */
+
+        /* 导航开始 */
+        .calligraphy_works_nav {
             text-decoration: none;
-            /* width: 260px; */
-            /* background: #db5050; */
-            /* background-color: #393636; */
         }
-        
-        .calligraphy_works_nav_text{
+
+        .calligraphy_works_nav_text {
             margin-top: 25px;
             font-size: 15px;
             color: #4e4c4c;
-            /* background:  #db5050; */
-            /* text-decoration: none; */
         }
-        .calligraphy_works_nav_text:hover{
+
+        .calligraphy_works_nav_text:hover {
             margin-top: 25px;
             color: #db5050;
             box-shadow: 0 1px 3px 0 #da4a4a;
             /* text-decoration: none; */
         }
-        .tab-content{
-            max-width: 1100px;
-            height: 100%;
-            margin: 0 auto;
-            /* background-color: #393636; */
-        }
+
+        /* 导航结束 */
+        /* 内容开始 */
         
-        .card-title{
+        /* 图片卡片 */
+        .card_container{
+            height: 270px;
+            border: none;
+        }
+        .image_card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            object-fit: fill;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .card-title {
             bottom: 5%;
             position: absolute;
             color: white;
             display: none;
 
-        } */
-        .img-fluid:hover  .card-title{
-            
-            
-            display: block;
-        }
-        /* .excellent_works_container{
-            position: relative;
-            margin-top: 50px;
 
-        } */
-        .excellent_works_card{
-           
-            margin: 0 auto;
-            position: relative;
-            
         }
-        
-        .excellent_works_card>span{
+        /* 喜欢爱心开始 */
+        .card_label1 {
+            bottom: 10%;
+            right: 8%;
             position: absolute;
-            background: -webkit-linear-gradient(bottom, rgba(0,0,0,1)0%,rgba(0,0,0,0.5)66%, rgba(0,0,0,0)99%);/* Safari、Chrome */
-            height: 70px;
-            width: 100%; 
-            bottom: 0; 
-            left: 0;
-            border-radius: 15px;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            padding: 2px;
+            background-color: #ffffff;
             display: none;
-            
         }
-        .excellent_works_card>img{
-            cursor: pointer;
-            border-radius: 15px;
-        }
-        .excellent_works_card:hover  .title{
 
+        .img-fluid:hover .card-title {
             display: block;
         }
-        .excellent_works_card>span>h2{
-            left: 5%;
-            position: absolute;
-            color: white;
-           
+        .img-fluid:hover .card_label1{
+            display: block;
+            cursor: pointer;
         }
-    </style>
+        .card_label1:hover{
+            background-color: #eeeaea;
+        }
+        /* 喜欢爱心结束 */
+        /* 浏览量开始 */
+        .card_eye{
+            bottom: 0;
+            right: 12%;
+            position: absolute;
+            margin-left:auto;
+            margin-right:auto;
+        }
+       
+        .card_like{
+            bottom: 0;
+            right: 24%;
+            position: absolute;
+            margin-left:auto;
+            margin-right:auto;
+        }
+       
+        /* 浏览量结束 */
+        /* 头像开始 */
+        .card_people{
+            bottom: 0;
+            left: 8%;
+            position: absolute;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        /* 头像结束 */
+        .card_eye:hover,.card_like:hover,.card_people{
+            cursor: pointer;
+        }
+        .card-img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            /* 设置内边距 */
+        }
+
+        .card-img-overlay:hover {
+            background-color: rgba(53, 51, 51, 0.5);
+        }
+
         
-    
+    </style>
+
+
 </head>
+
 <body>
     <div class="first">
         <!-- 导航栏 -->
@@ -428,172 +402,601 @@
         <!-- 导航栏结束 -->
     </div>
     <!-- 内容开始 -->
-    <div class="container-fluid a" >
-    <!-- 视频背景开始 -->
-        <div class="calligraphy_video_container">
-            <video class="fullscreenvideo"  id="bgvid" playsinline="" autoplay="" muted="ture" loop="">
-                <source src="videos/Writing - 107240.mp4" type="video/mp4">
-            </video>
-        </div>
-    <!-- 视频背景结束-->
-    
-        <div class="row align-items-center justify-content-center ">
-            <form class="calligraphy_search ">
-                <input class="calligraphy_input form-control" type="text" placeholder="请输入内容...">
-                <button> <i class="bi bi-search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                        style="color: #393636;" class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </i></button>
-            </form>
+    <div class="calligraphy_img_container">
+        <!-- 视频背景开始 -->
+        <img src="img/calligraphy_work1.jpg" alt="">
 
-            <div class="calligraphy_text">
-                <h1>优秀书法作品展示</h1>
-                <h4>Exhibition of excellent calligraphy works.</h4>
-            </div>
-        </div>  
     </div>
 
     <!-- 作品集 -->
-    <div class="container-fluid calligraphy_works_container">
+    <div class="container-fluid ">
         <!-- 导航 -->
         <div class="calligraphy_works_nav">
             <ul id="myTab" class="nav nav-tabs">
                 <li class="nav-item ">
-                    <a class="nav-link active calligraphy_works_nav_text" data-toggle="tab"  href="#excellent_works" >优秀作品</a>
+                    <a class="nav-link active calligraphy_works_nav_text" data-toggle="tab"
+                        href="#excellent_works">优秀作品</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link calligraphy_works_nav_text" data-toggle="tab"  href="#match_works" >比赛作品</a>
+                    <a class="nav-link calligraphy_works_nav_text" data-toggle="tab" href="#match_works">比赛作品</a>
                 </li>
-                
             </ul>
-            <div class="tab-content ">
-                <!-- 优秀作品详细内容 -->
-                <div class=" active tab-pane fade in"  id="excellent_works">
-                    优秀作品详细内容
-                    <div class="row justify-content-center excellent_works_container " style="margin-top: 20px; ">
+            <div class="container pl-5 pr-5 ">
+                <div class="tab-content ">
+                    <!-- 优秀作品详细内容 -->
+                    <div class=" active tab-pane fade in" id="excellent_works">
+                        <div class="row  excellent_works_container " style="margin-top: 20px; ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/8ROS.jpg" alt="">
+                                        <div class="card-img-overlay ">
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/3.png" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/22e386.jpg" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
+                        <div class="row " style="margin-top: 20px; ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/2.png" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/44GY1H.jpg" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/3.png" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
+                        <!-- 紧挨着大图的四个文本框 尾-->
                     </div>
-                    <div class="row justify-content-center " style="margin-top: 20px; ">
+                    <!-- 比赛作品详细内容 -->
+                    <div class="tab-pane fade in" id="match_works">
+                        <div class="row  match_works_container" style="margin-top: 20px; ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/22e386.jpg" alt="">
+                                        <div class="card-img-overlay ">
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center " style="margin-top: 20px; ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/Carousel-2.jpg" alt="">
+                                        <div class="card-img-overlay ">
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center " style="margin-top: 20px; ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/banner.png" alt="">
+                                        <div class="card-img-overlay ">
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
-                            <div class="excellent_works_card">
-                                <img src="img/44GY1H.jpg" style="width: 100%;height: 100%;" alt="">
-                                <span class="title">
-                                    <h2 style="color: azure;">koli</h2> 
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 紧挨着大图的四个文本框 尾-->
-                </div>
-                <!-- 比赛作品详细内容 -->
-                <div class="tab-pane fade" id="match_works">
-                    比赛作品详细内容
-                </div>
+                        <div class="row " style="margin-top: 20px; ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/2.png" alt="">
+                                        <div class="card-img-overlay ">
 
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/2.png" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-2 ">
+                                <div class="card mb-1 card_container"><!--卡片开始-->
+                                    <div class="card-body img-fluid" style="text-align: center;">
+                                        <img class="card-img-bottom image_card" src="img/2.png" alt="">
+                                        <div class="card-img-overlay ">
+
+                                            <h4 class="card-title">John Doe</h4>
+                                            <span class="card_label1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </span>
+                                            <div class="card_eye ">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">12</span>
+                                            </div>
+                                            <div class="card_like">
+                                                <span >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                    </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">77777</span>
+                                            </div>
+                                            <div class="card_people">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                      </svg>
+                                                </span>
+                                                <span style="font-size: 8px;">Cecelia</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--卡片结束-->
+                            </div>
+                        </div>
+                        <!-- 紧挨着大图的四个文本框 尾-->
+                    </div> <!--比赛作品结束-->
+                </div><!--tab结束-->
             </div>
-        </div>
+        </div><!--内容结束-->
     </div>
     <div style="height: 700px;">
-        
-        
+
     </div>
 </body>
 <script>
@@ -606,7 +1009,8 @@
     })
     // 选项卡内容自动显示
     $(function () {
-      $('#myTab li:eq(1) a').tab('show');
-   });
+        $('#myTab li:eq(1) a').tab('show');
+    });
 </script>
+
 </html>
